@@ -1,10 +1,12 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Nav from "./components/Nav"
 
 const App = () =>{
   return(
     <BrowserRouter>
-    <Routes>
-      <Route path="/" element={<Home />}/>
+    <Nav/>
+    {/*<Routes>
+     } <Route path="/" element={<Home />}/>
       <Route path="/peliculas" element={<SeccionGeneralPeliculas />}/>
       <Route path="/peliculas/:filtroPeliculas/page/:paginaPeliculas" element={<SeccionFiltroPeliculas />}/>
       <Route path="/peliculas/:idPelicula/info" element={<InfoPelicula />}/>
@@ -22,8 +24,8 @@ const App = () =>{
       <Route path="/series/:idSerie/similares" element={<Similares />}/>
 
       <Route path="/busqueda/:nombreBusqueda/page/:paginaBusqueda" element={<ResultadosBusqueda />}/>
-      <Route path="*" element={<Error404 />}/>
-      </Routes>
+  <Route path="*" element={<Error404 />}/>
+      </Routes>*/}
     </BrowserRouter>
 
   )
