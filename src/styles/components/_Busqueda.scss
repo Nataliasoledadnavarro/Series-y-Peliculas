@@ -1,0 +1,18 @@
+form{
+    display: flex;
+    input, button{
+        background-color: transparent;
+        border: none;
+        color:white;
+        
+    }
+    input{
+        font-size: 24px;
+        padding: 4px;
+    }
+    input::placeholder{
+        font-size: 24px;
+
+
+    }
+}
