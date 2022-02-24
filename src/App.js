@@ -1,25 +1,32 @@
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+const App = () =>{
+  return(
+    <BrowserRouter>
+    <Routes>
+      <Route path="/" element={<Home />}/>
+      <Route path="/peliculas" element={<SeccionGeneralPeliculas />}/>
+      <Route path="/peliculas/:filtroPeliculas/page/:paginaPeliculas" element={<SeccionFiltroPeliculas />}/>
+      <Route path="/peliculas/:idPelicula/info" element={<InfoPelicula />}/>
+      <Route path="/peliculas/:idPelicula/reparto" element={<Reparto />}/>
+      <Route path="/persona/:idPelicula/info" element={<PersonaInfo />}/>
+      <Route path="/persona/:idPelicula/creditos" element={<PersonaCreditos />}/>
+      <Route path="/peliculas/:idPelicula/video" element={<VideoPelicula />}/>
+      <Route path="/peliculas/:idPelicula/similar" element={<Similares />}/>
+
+      <Route path="/series" element={<SeccionSeries />}/>
+      <Route path="/series/:filtroSeries/page/:paginaSeries" element={<SeccionFiltroSeries />}/>
+      <Route path="/series/:idSerie/info" element={<InfoSerie />}/>
+      <Route path="/series/:idSerie/episodios/:temporadaSerie" element={<EpisodiosSerie />}/>
+      <Route path="/series/:idSerie/reparto" element={<Reparto />}/>
+      <Route path="/series/:idSerie/similares" element={<Similares />}/>
+
+      <Route path="/busqueda/:nombreBusqueda/page/:paginaBusqueda" element={<ResultadosBusqueda />}/>
+      <Route path="*" element={<Error404 />}/>
+      </Routes>
+    </BrowserRouter>
+
+  )
 }
 
 export default App;
