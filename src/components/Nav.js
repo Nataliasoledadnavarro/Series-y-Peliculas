@@ -1,3 +1,4 @@
+import { Link} from "react-router-dom";
 import "../styles/components/_Nav.scss";
 import {
   BsHouseDoor as HomeIcon,
@@ -10,9 +11,9 @@ const Nav = () => {
   return (
     <nav>
       <div className="contenedor-iconos">
-        <HomeIcon className="icono-nav" />
-        <CamaraIcon className="icono-nav" />
-        <MonitorIcon className="icono-nav" />
+        <Link to="/"><HomeIcon className="icono-nav" /></Link>
+        <Link to="/peliculas/:filtroPeliculas/page/:paginaPeliculas"><CamaraIcon className="icono-nav" /></Link>
+        <Link to="/series/:filtroSeries/page/:paginaSeries"><MonitorIcon className="icono-nav" /></Link>
         <Busqueda />
       </div>
     </nav>
