@@ -1,0 +1,19 @@
+nav{
+    width: 100%;
+    background-color: black;
+    height: 60px;
+    .contenedor-iconos{
+        width: 50%;
+        height: 60px;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+    .icono-nav{
+        color:white;
+        font-size: 28px;
+    }
+    .icono-nav:hover{
+        color:blue
+    }
+    }
+}
