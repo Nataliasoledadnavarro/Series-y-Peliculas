@@ -1,29 +1,41 @@
-import { useNavigate} from "react-router-dom"
-import {useState} from "react"
+import { useNavigate, useSearchParams } from "react-router-dom";
+import { useState } from "react";
 import { BsSearch as LupaIcon } from "react-icons/bs";
-import "../styles/components/_Busqueda.scss"
+import "../styles/components/_Busqueda.scss";
 
 const Busqueda = () => {
+  const [searchParams, setSearchParams] = useSearchParams({
+    query: "",
+    pagina: 1,
+  });
   const navigate = useNavigate();
-  const [valorDelInput, setValorDelInput] = useState("")
-  const [paginaActual, setPaginaActual] = useState(1)
-
 
   const handleSubmit = (e) => {
-    e.preventDefault()
-    navigate(`/busqueda/${valorDelInput}/page/${paginaActual}`)
-  }
+    e.preventDefault();
+    navigate(
+      `/busqueda/${searchParams.get("query")}/page/${searchParams.get(
+        "pagina"
+      )}`
+    );
+  };
 
   const handleChange = (e) => {
-    setValorDelInput(e.target.value)
-  }
- 
+    setSearchParams({
+      query: e.target.value,
+    });
+  };
+
   return (
     <form onSubmit={handleSubmit}>
-      <button className="boton-buscar" aria-label="Boton buscar" >
+      <button className="boton-buscar" aria-label="Boton buscar">
         <LupaIcon className="icono-nav" />
       </button>
-      <input type="text" placeholder="Search" value={valorDelInput} onChange={handleChange}/>
+      <input
+        type="text"
+        placeholder="Search"
+        value={searchParams.get("query")}
+        onChange={handleChange}
+      />
     </form>
   );
 };
