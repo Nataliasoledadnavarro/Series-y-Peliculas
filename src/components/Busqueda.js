@@ -1,7 +1,7 @@
 import { useNavigate, useSearchParams } from "react-router-dom";
 import { useState } from "react";
 import { BsSearch as LupaIcon } from "react-icons/bs";
-import "../styles/components/_Busqueda.scss";
+import "../styles/components/_Formulario.scss";
 
 const Busqueda = () => {
   const [searchParams, setSearchParams] = useSearchParams({
