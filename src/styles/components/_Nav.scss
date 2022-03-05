@@ -1,19 +1,50 @@
-nav{
-    width: 100%;
-    background-color: black;
+@import "../utilidades/Variables";
+
+nav {
+  width: 100%;
+  background-color: $negro;
+  height: 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  .contenedor-iconos {
     height: 60px;
-    .contenedor-iconos{
-        width: 50%;
-        height: 60px;
-        display: flex;
-        align-items: center;
-        justify-content: space-around;
-    .icono-nav{
-        color:white;
-        font-size: 28px;
+    display: flex;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    li {
+      list-style: none;
     }
-    .icono-nav:hover{
-        color:blue
+    .icono-nav {
+      color: $blanco;
+      font-size: 28px;
+      margin-right: 20px;
+      margin-left: 10px;
     }
+    .icono-nav:hover {
+      color: $azul;
     }
+  }
+  .select-lenguaje {
+    background-color: $negro;
+    border: none;
+    color: $blanco;
+    height: 30px;
+    margin-right: 20px;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  nav {
+    width: 100%;
+    background-color: $negro;
+    height: 60px;
+    .contenedor-iconos {
+      justify-content: center;
+      li {
+        display: none;
+      }
+    }
+  }
 }
