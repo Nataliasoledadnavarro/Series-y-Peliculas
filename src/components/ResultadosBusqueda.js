@@ -1,11 +1,33 @@
-import {useParams} from "react-router-dom"
+import { useParams } from "react-router-dom";
+import { useState, useEffect } from "react";
 
+const ResultadosBusqueda = () => {
+  const params = useParams();
+  console.log(params.nombreBusqueda);
+  console.log(params.paginaBusqueda);
+  const [resultado, setResultado] = useState([]);
+  {
+    /*
+    1. Hacer el fetch para buscar coincidencias utilizando el params.nomnbreBusqueda 
+    2. guardar la info en una variable de estado
+    3. Retornar tarjetas con la info de data
+    4. Retornar el paginado. 
+    5. Se puede modificar el search params segun la pagina donde esta el usuario?
+*/
+  }
 
-const ResultadosBusqueda = () =>{
-    const params = useParams()
-    return(
-        <div>ResultadosBusqueda</div>
+  useEffect(() => {
+    fetch(
+      `https://api.themoviedb.org/3/search/multi?api_key=252843cc327f9e10875f92a24a03d130&language=es-US&query=${params.nombreBusqueda}&page=${params.paginaBusqueda}`
     )
-}
+      .then((res) => res.json())
+      .then((data) => {
+        setResultado(data.results);
+        console.log(data.results);
+      });
+  }, []);
 
-export default ResultadosBusqueda ;
+  return <div>ResultadosBusqueda</div>;
+};
+
+export default ResultadosBusqueda;

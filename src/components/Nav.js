@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import "../styles/components/_Nav.scss";
+import  "../styles/utilidades/_Variables.scss";
 import {
   BsHouseDoor as HomeIcon,
   BsCameraVideo as CamaraIcon,
@@ -8,6 +9,8 @@ import { FiMonitor as MonitorIcon } from "react-icons/fi";
 import Busqueda from "./Busqueda";
 
 const Nav = () => {
+
+
   return (
     <nav>
       <ul className="contenedor-iconos">
@@ -28,6 +31,10 @@ const Nav = () => {
         </Link>
         <Busqueda />
       </ul>
+      <select className="select-lenguaje">
+        <option value="español">Español</option>
+        <option value="ingles">Ingles</option>
+      </select>
     </nav>
   );
 };

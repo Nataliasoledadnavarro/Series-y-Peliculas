@@ -1,11 +1,13 @@
+@import "../utilidades/Variables";
+
 form {
   display: flex;
-  width: 40%;
+  width: 50%;
   input,
   button {
     background-color: transparent;
     border: none;
-    color: white;
+    color: $blanco;
   }
   input {
     font-size: 24px;

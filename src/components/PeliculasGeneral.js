@@ -1,6 +1,7 @@
+
 const PeliculasGeneral = () =>{
     return(
-        <div>PeliculasGeneral</div>
+       <div>Peliculas general</div>
     )
 }
 
