@@ -1,0 +1,24 @@
+@import "../utilidades/Variables";
+.contenedor-sección {
+  background-color: $gris-oscuro;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  section {
+    width: 95%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    h2 {
+      margin-top: 0;
+      color: $blanco;
+    }
+    .resultados-busqueda {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+    justify-content: center;
+    }
+  }
+}
