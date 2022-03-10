@@ -8,7 +8,7 @@ const ResultadosBusqueda = () => {
   console.log(params.nombreBusqueda);
   console.log(params.paginaBusqueda);
   const [resultado, setResultado] = useState([]);
-  let [paginaActual, setPaginaActual] = useState(1);
+  let [paginaActual, setPaginaActual] = useState(2);
 
   {
     /*
