@@ -1,17 +1,18 @@
 @import "../utilidades/Variables";
 .contenedor-sección {
-  background-color: $gris-oscuro;
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
+  padding-top: 30px;
+  background-color: $gris-oscuro;
   section {
-    width: 95%;
-    margin: auto;
     display: flex;
     flex-direction: column;
     h2 {
-      margin-top: 0;
+      font-size: 2rem;
+      font-weight: 300;
+      margin-left: 30px;
       color: $blanco;
     }
     .resultados-busqueda {

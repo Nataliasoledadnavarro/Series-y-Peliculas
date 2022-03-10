@@ -1,9 +1,10 @@
 @import "../utilidades/Variables";
 
 .tarjeta {
-  margin: 10px;
+  width: 250px;
+  height: 450px;
   .contenedor-img {
-    width: 250px;
+   width: 245px;
     height: 380px;
     overflow: hidden;
     img {
@@ -17,9 +18,12 @@
   }
   .titulo-resultado{
       color: $blanco;
-      font-weight: 100;
+      font-weight:100;
       font-size: 20px;
       letter-spacing: 1px;
+  }
+  .titulo-resultado:hover{
+    color: white; 
   }
 }
 
