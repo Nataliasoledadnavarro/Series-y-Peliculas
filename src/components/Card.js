@@ -1,18 +1,18 @@
-import "../styles/components/_Cards.scss";
+import "../styles/components/_Card.scss";
 import img from "../img/imagen-no-encontrada.jpg";
 
-const Cards = ({ data }) => {
+const Card = ({ resultado }) => {
   const mostrarImagen = (resultado) => {
     if (resultado.profile_path) {
       return `https://image.tmdb.org/t/p/w300/${resultado.profile_path}`;
     } else if (resultado.poster_path) {
       return `https://image.tmdb.org/t/p/w300/${resultado.poster_path}`;
     } else {
-      return  img 
+      return img;
     }
   };
 
-  return (data.map((resultado) => (
+  return (
     <div Key={resultado.id} className="tarjeta">
       <div className="contenedor-img">
         <img src={mostrarImagen(resultado)}></img>
@@ -21,7 +21,7 @@ const Cards = ({ data }) => {
         {resultado.title ? resultado.title : resultado.name}
       </h3>
     </div>
-  )))
+  );
 };
 
-export default Cards;
+export default Card;

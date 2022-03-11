@@ -1,14 +1,12 @@
 import { useParams } from "react-router-dom";
 import { useState, useEffect } from "react";
-import Cards from "./Cards";
+import Card from "../components/Card";
 import "../styles/components/_Resultados-busqueda.scss";
 
 const ResultadosBusqueda = () => {
   const params = useParams();
-  console.log(params.nombreBusqueda);
-  console.log(params.paginaBusqueda);
-  const [resultado, setResultado] = useState([]);
-  let [paginaActual, setPaginaActual] = useState(2);
+  const [resultados, setResultados] = useState([]);
+  let [paginaActual, setPaginaActual] = useState(1);
 
   {
     /*
@@ -26,10 +24,8 @@ const ResultadosBusqueda = () => {
     )
       .then((res) => res.json())
       .then((data) => {
-        setResultado(data.results);
+        setResultados(data.results);
         setPaginaActual = data.page;
-        console.log(data.results);
-        console.log(data);
       });
   }, []);
 
@@ -38,7 +34,9 @@ const ResultadosBusqueda = () => {
       <section>
         <h2>Resultados busqueda : {params.nombreBusqueda}</h2>
         <div className="resultados-busqueda">
-          <Cards data={resultado} />
+          {resultados.map((resultado) => (
+            <Card resultado={resultado} />
+          ))}
         </div>
       </section>
     </div>

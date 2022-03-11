@@ -1,6 +1,16 @@
+@import "../utilidades/Variables";
 
-.carousel {
-  color: white;
+.slick-slider {
   width: 95%;
   margin: auto;
+  color: $detalles;
+  .slick-prev:before,
+  .slick-next:before {
+    color: $detalles;
+    font-size: 24px;
+  }
+  .slick-dots li button:before {
+    color: $detalles;
+    font-size: 8px;
+  }
 }
