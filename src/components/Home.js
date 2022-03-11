@@ -1,13 +1,33 @@
 import CategoriaPeliculas from "./CategoriaPeliculas";
 import CategoriasSeries from "./CategoriasSeries";
+import "../styles/components/_Home.scss";
+import { GrFormNextLink } from "react-icons/gr";
 
-const Home = () =>{
-    return(
-        <>
-        <CategoriaPeliculas url="https://api.themoviedb.org/3/trending/movie/week?api_key=252843cc327f9e10875f92a24a03d130"/>
-        <CategoriasSeries url="https://api.themoviedb.org/3/trending/tv/week?api_key=252843cc327f9e10875f92a24a03d130"/>
-        </>
-    )
-}
+const Home = () => {
+  return (
+    <div className="contenedor-secciones">
+      <section>
+        <div className="contenedor-titulo">
+          <h2>Peliculas que son tendencia</h2>
+          <GrFormNextLink className="icono-flecha" />
+        </div>
+
+        <div className="resultados-busqueda">
+          <CategoriaPeliculas url="https://api.themoviedb.org/3/trending/movie/week?api_key=252843cc327f9e10875f92a24a03d130" />
+        </div>
+      </section>
+      <section>
+        <div className="contenedor-titulo">
+          <h2>Series que son tendencia</h2>
+          <GrFormNextLink className="icono-flecha" />
+        </div>
+
+        <div className="resultados-busqueda">
+          <CategoriasSeries url="https://api.themoviedb.org/3/trending/tv/week?api_key=252843cc327f9e10875f92a24a03d130" />
+        </div>
+      </section>
+    </div>
+  );
+};
 
 export default Home;

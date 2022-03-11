@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import Carousel from "../components/Carousel"
 
 const CategoriasSeries = ({url}) =>{
     const [series, setSeries] = useState([]);
@@ -12,10 +13,7 @@ const CategoriasSeries = ({url}) =>{
     console.log(series)
   
     return(
-        <div>
-            <h3>titulo</h3>
-            <div>Series</div>
-        </div>
+      <Carousel  data={series}/>
     )
 }
 

@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import Carousel from "../components/Carousel"
 
 const CategoriaPeliculas = ({ url }) => {
   const [peliculas, setPeliculas] = useState([]);
@@ -12,10 +13,7 @@ const CategoriaPeliculas = ({ url }) => {
   console.log(peliculas);
 
   return (
-    <div>
-      <h3>titulo</h3>
-      <div>peliculas</div>
-    </div>
+    <Carousel data={peliculas}/>
   );
 };
 
