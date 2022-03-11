@@ -12,7 +12,7 @@ const Cards = ({ data }) => {
     }
   };
 
-  return data.map((resultado) => (
+  return (data.map((resultado) => (
     <div Key={resultado.id} className="tarjeta">
       <div className="contenedor-img">
         <img src={mostrarImagen(resultado)}></img>
@@ -21,7 +21,7 @@ const Cards = ({ data }) => {
         {resultado.title ? resultado.title : resultado.name}
       </h3>
     </div>
-  ));
+  )))
 };
 
 export default Cards;
