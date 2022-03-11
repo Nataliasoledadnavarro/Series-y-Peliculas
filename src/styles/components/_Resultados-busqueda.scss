@@ -1,19 +1,18 @@
 @import "../utilidades/Variables";
-.contenedor-sección {
+@import "../utilidades/Mixin";
+
+.contenedor-seccion {
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
   padding-top: 30px;
-  background-color: $gris-oscuro;
+  background-color: $negro;
   section {
     display: flex;
     flex-direction: column;
     h2 {
-      font-size: 2rem;
-      font-weight: 300;
-      margin-left: 30px;
-      color: $blanco;
+    @include h2-secciones;
     }
     .resultados-busqueda {
       display: flex;

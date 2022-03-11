@@ -1,0 +1,22 @@
+@import "../utilidades/Variables";
+@import "../utilidades/Mixin";
+
+.contenedor-secciones {
+  width: 100%;
+  padding-top: 30px;
+  background-color: $negro;
+  section {
+    .contenedor-titulo {
+      display: flex;
+      align-items: center;
+      h2 {
+        @include h2-secciones;
+      }
+      .icono-flecha {
+        margin-left: 20px;
+        font-size: 2rem;
+        color: $azul;
+      }
+    }
+  }
+}

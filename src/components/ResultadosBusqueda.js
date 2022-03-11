@@ -34,7 +34,7 @@ const ResultadosBusqueda = () => {
   }, []);
 
   return (
-    <div className="contenedor-sección">
+    <div className="contenedor-seccion">
       <section>
         <h2>Resultados busqueda : {params.nombreBusqueda}</h2>
         <div className="resultados-busqueda">
