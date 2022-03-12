@@ -13,7 +13,7 @@ const Card = ({ resultado }) => {
   };
 
   return (
-    <div Key={resultado.id} className="tarjeta">
+    <div key={resultado.id} className="tarjeta">
       <div className="contenedor-img">
         <img src={mostrarImagen(resultado)}></img>
       </div>
