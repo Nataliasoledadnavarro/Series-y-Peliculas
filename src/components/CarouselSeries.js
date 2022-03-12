@@ -3,9 +3,10 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import "../styles/components/_Carousel.scss";
-import Card from "../components/Card";
+import Card from "./Card";
+import { cantidadTarjetas } from "../auxiliares/Funciones";
 
-const CategoriasSeries = ({url}) =>{
+const CarouselSeries = ({url}) =>{
     const [series, setSeries] = useState([]);
 
     useEffect(() => {
@@ -19,8 +20,8 @@ const CategoriasSeries = ({url}) =>{
       dots: true,
       infinite: true,
       speed: 1000,
-      slidesToShow: 5,
-      slidesToScroll: 5,
+      slidesToShow: cantidadTarjetas(),
+      slidesToScroll: cantidadTarjetas(),
       autoplay: true,
       autoplaySpeed: 3000,
     };
@@ -35,4 +36,4 @@ const CategoriasSeries = ({url}) =>{
     )
 }
 
-export default CategoriasSeries;
+export default CarouselSeries;

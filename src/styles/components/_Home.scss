@@ -10,6 +10,7 @@
     .contenedor-titulo {
       display: flex;
       align-items: center;
+      margin-top: 30px;
       h2 {
         @include h2-secciones;
       }

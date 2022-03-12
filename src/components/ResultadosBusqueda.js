@@ -2,6 +2,7 @@ import { useParams } from "react-router-dom";
 import { useState, useEffect } from "react";
 import Card from "../components/Card";
 import "../styles/components/_Resultados-busqueda.scss";
+import { capitalizar } from "../auxiliares/Funciones";
 
 const ResultadosBusqueda = () => {
   const params = useParams();
@@ -32,7 +33,7 @@ const ResultadosBusqueda = () => {
   return (
     <div className="contenedor-seccion">
       <section>
-        <h2>Resultados busqueda : {params.nombreBusqueda}</h2>
+        <h2>Resultados busqueda : {capitalizar(params.nombreBusqueda)}</h2>
         <div className="resultados-busqueda">
           {resultados.map((resultado) => (
             <Card resultado={resultado} />

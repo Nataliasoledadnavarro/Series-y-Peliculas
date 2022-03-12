@@ -1,7 +1,7 @@
 @import "../utilidades/Variables";
 
 .slick-slider {
-  width: 95%;
+  width: 90%;
   margin: auto;
   color: $detalles;
   .slick-prev:before,
@@ -12,5 +12,17 @@
   .slick-dots li button:before {
     color: $detalles;
     font-size: 8px;
+  }
+  .slick-slide{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .slick-slider {
+    width: 80%;
   }
 }
