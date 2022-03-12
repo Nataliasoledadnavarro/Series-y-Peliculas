@@ -7,7 +7,7 @@ import { capitalizar } from "../auxiliares/Funciones";
 const ResultadosBusqueda = () => {
   const params = useParams();
   const [resultados, setResultados] = useState([]);
-  let [paginaActual, setPaginaActual] = useState(1);
+  //let [paginaActual, setPaginaActual] = useState(1);
 
   {
     /*
@@ -21,12 +21,11 @@ const ResultadosBusqueda = () => {
 
   useEffect(() => {
     fetch(
-      `https://api.themoviedb.org/3/search/multi?api_key=252843cc327f9e10875f92a24a03d130&language=es-US&query=${params.nombreBusqueda}&page=${paginaActual}`
+      `https://api.themoviedb.org/3/search/multi?api_key=252843cc327f9e10875f92a24a03d130&language=es-US&query=${params.nombreBusqueda}&page=1`
     )
       .then((res) => res.json())
       .then((data) => {
         setResultados(data.results);
-        setPaginaActual = data.page;
       });
   }, []);
 
