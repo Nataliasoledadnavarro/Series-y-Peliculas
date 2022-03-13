@@ -4,8 +4,6 @@
 
 ### Se trata de mi trabajo final en [Ada itw](https://adaitw.org/) donde puse en práctica lo aprendido durante mi formación como programadora FrontEnd.
 
-## Ir al [buscador!](https://buscadorpeliculasyseries.netlify.app/)
-
 ## Podrás:
 <ul>
     <li> Home: Ver peliculas y series en tendencia.</li>
