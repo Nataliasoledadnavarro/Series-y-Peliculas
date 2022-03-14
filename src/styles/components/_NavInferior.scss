@@ -7,13 +7,15 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  .contenedor-iconos {
+  ul {
     height: 60px;
+    width: 100%;
     display: flex;
     align-items: center;
+    justify-content: space-around;
     margin: 0;
     padding: 0;
-    .link-nav {
+    li {
       list-style: none;
     }
     .icono-nav {
@@ -24,23 +26,6 @@ nav {
     }
     .icono-nav:hover {
       color: $detalles;
-    }
-  }
-  .select-lenguaje {
-    background-color: $negro;
-    border: none;
-    color: $blanco;
-    height: 30px;
-    margin-right: 20px;
-  }
-}
-
-@media screen and (max-width: 500px) {
-  nav {
-    .contenedor-iconos {
-      .link-nav {
-        display: none;
-      }
     }
   }
 }
