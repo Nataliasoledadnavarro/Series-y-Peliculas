@@ -15,7 +15,9 @@ import InfoSerie from "./components/InfoSerie";
 import EpisodiosSerie from "./components/EpisodiosSerie";
 import ResultadosBusqueda from "./components/ResultadosBusqueda";
 import Error404 from "./components/Error404";
+import NavInferior from "./components/NavInferior";
 import Footer from "./components/Footer"
+
 
 {/*252843cc327f9e10875f92a24a03d130*/}
 {/* Una pelicula (https://api.themoviedb.org/3/movie/550?api_key=252843cc327f9e10875f92a24a03d130)*/}
@@ -46,6 +48,7 @@ const App = () => {
         <Route path="/busqueda/:nombreBusqueda/page/:paginaBusqueda" element={<ResultadosBusqueda />}/> {/*Redirecciona a los resultados de la busqueda. */}
         <Route path="*" element={<Error404 />} />
       </Routes>
+      {window.innerWidth <= 500 && <NavInferior/>}
       <Footer/>
     </BrowserRouter>
   );
