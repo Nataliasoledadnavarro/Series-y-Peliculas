@@ -27,7 +27,7 @@ const ResultadosBusqueda = () => {
       .then((data) => {
         setResultados(data.results);
       });
-  }, []);
+  }, [params.nombreBusqueda]);
 
   return (
     <div className="contenedor-seccion">

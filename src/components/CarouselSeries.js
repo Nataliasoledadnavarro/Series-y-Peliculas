@@ -13,7 +13,7 @@ const CarouselSeries = ({url}) =>{
       fetch( url )
         .then((res) => res.json())
         .then((data) => setSeries(data.results));
-    }, []);
+    }, [url]);
 
     const settings = {
       className: "carousel",
