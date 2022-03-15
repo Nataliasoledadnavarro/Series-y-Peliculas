@@ -13,7 +13,7 @@ const CarouselPeliculas = ({ url }) => {
     fetch(url)
       .then((res) => res.json())
       .then((data) => setPeliculas(data.results));
-  }, []);
+  }, [url]);
 
   const settings = {
     className: "carousel",

@@ -1,4 +1,6 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { useState } from "react";
+import "./App.scss"
 import Nav from "./components/Nav";
 import Home from "./components/Home";
 import PeliculasGeneral from "./components/PeliculasGeneral";
@@ -17,14 +19,25 @@ import ResultadosBusqueda from "./components/ResultadosBusqueda";
 import Error404 from "./components/Error404";
 import NavInferior from "./components/NavInferior";
 import Footer from "./components/Footer"
+import Context from "./contexto/Context"
+
+
 
 
 {/*252843cc327f9e10875f92a24a03d130*/}
 {/* Una pelicula (https://api.themoviedb.org/3/movie/550?api_key=252843cc327f9e10875f92a24a03d130)*/}
 const App = () => {
 
+  const [lenguaje, setLenguaje] = useState("es")
+
+  const contexto = {
+    lenguaje: lenguaje,
+    setLenguaje: setLenguaje,
+  }
+
   return (
     <BrowserRouter>
+    <Context.Provider value={contexto}>
       <Nav />
       <Routes>
         <Route path="/" element={<Home />}/>{/*muestra series y peliculas que son tendencia.*/}
@@ -50,6 +63,7 @@ const App = () => {
       </Routes>
       {window.innerWidth <= 500 && <NavInferior/>}
       <Footer/>
+      </Context.Provider>
     </BrowserRouter>
   );
 };

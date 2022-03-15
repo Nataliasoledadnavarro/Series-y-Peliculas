@@ -13,14 +13,14 @@ const Card = ({ resultado }) => {
   };
 
   return (
-    <div key={resultado.id} className="tarjeta">
+    <article key={resultado.id} className="tarjeta">
       <div className="contenedor-img">
-        <img src={mostrarImagen(resultado)}></img>
+        <img src={mostrarImagen(resultado)} alt={resultado.title ? resultado.title : resultado.name}></img>
       </div>
       <h3 className="titulo-resultado">
         {resultado.title ? resultado.title : resultado.name}
       </h3>
-    </div>
+    </article>
   );
 };
 

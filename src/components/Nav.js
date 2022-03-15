@@ -7,8 +7,17 @@ import {
 } from "react-icons/bs";
 import { FiMonitor as MonitorIcon } from "react-icons/fi";
 import Busqueda from "./Busqueda";
+import { useContext } from "react"
+import Context from "../contexto/Context";
 
 const Nav = () => {
+  const contexto = useContext(Context)
+
+  const handleChangeLenguaje = (e) => {
+   contexto.setLenguaje(e.target.value)
+  };
+
+
   return (
     <nav>
       <ul className="contenedor-iconos">
@@ -35,7 +44,7 @@ const Nav = () => {
         </Link>
         <Busqueda />
       </ul>
-      <select className="select-lenguaje">
+      <select className="select-lenguaje"   onChange={handleChangeLenguaje}>
         <option value="español">Español</option>
         <option value="ingles">Ingles</option>
       </select>
