@@ -1,23 +1,16 @@
 import { useParams } from "react-router-dom";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useContext } from "react";
 import Card from "../components/Card";
 import "../styles/components/_Resultados-busqueda.scss";
 import { capitalizar } from "../auxiliares/Funciones";
+import Context from "../contexto/Context";
+import { titulosPeliculas } from "../auxiliares/Variables";
 
 const ResultadosBusqueda = () => {
   const params = useParams();
   const [resultados, setResultados] = useState([]);
   //let [paginaActual, setPaginaActual] = useState(1);
-
-  {
-    /*
-    1. Hacer el fetch para buscar coincidencias utilizando el params.nomnbreBusqueda 
-    2. guardar la info en una variable de estado
-    3. Retornar tarjetas con la info de data
-    4. Retornar el paginado. 
-    5. Se puede modificar el search params segun la pagina donde esta el usuario?
-*/
-  }
+  const lenguajeSeleccionado = useContext(Context).lenguaje;
 
   useEffect(() => {
     fetch(
@@ -32,7 +25,10 @@ const ResultadosBusqueda = () => {
   return (
     <div className="contenedor-seccion">
       <section>
-        <h2>Resultados busqueda : {capitalizar(params.nombreBusqueda)}</h2>
+        <h2>
+          {titulosPeliculas[lenguajeSeleccionado].busqueda}{" "}
+          {capitalizar(params.nombreBusqueda)}
+        </h2>
         <div className="resultados-busqueda">
           {resultados.map((resultado) => (
             <Card resultado={resultado} />

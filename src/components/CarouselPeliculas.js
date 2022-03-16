@@ -1,19 +1,23 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useContext } from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import "../styles/components/_Carousel.scss";
 import Card from "./Card";
 import { cantidadTarjetas } from "../auxiliares/Funciones";
+import Context from "../contexto/Context";
 
-const CarouselPeliculas = ({ url }) => {
+const CarouselPeliculas = ({ tipo, categoria }) => {
   const [peliculas, setPeliculas] = useState([]);
+  const contexto = useContext(Context);
 
   useEffect(() => {
-    fetch(url)
+    fetch(
+      `https://api.themoviedb.org/3/${categoria}/${tipo}/week?api_key=252843cc327f9e10875f92a24a03d130&language=${contexto.lenguaje}`
+    )
       .then((res) => res.json())
       .then((data) => setPeliculas(data.results));
-  }, [url]);
+  }, [contexto.lenguaje]);
 
   const settings = {
     className: "carousel",
