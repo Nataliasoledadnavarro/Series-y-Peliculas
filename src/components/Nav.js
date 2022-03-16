@@ -45,8 +45,12 @@ const Nav = () => {
         <Busqueda />
       </ul>
       <select className="select-lenguaje"   onChange={handleChangeLenguaje}>
-        <option value="español">Español</option>
-        <option value="ingles">Ingles</option>
+        <option value="es">Español</option>
+        <option value="in">Ingles</option>
+        <option value="ja">日本語</option>
+        <option value="la">Latin</option>
+        <option value="fr">Français</option>
+        <option value="pt">Português</option>
       </select>
     </nav>
   );
