@@ -3,7 +3,6 @@
 
 .contenedor-secciones {
   width: 100%;
-  height: 180vh;
   padding-top: 30px;
   background-color: $background-intermedio;
   section {
@@ -16,7 +15,7 @@
       }
       .icono-flecha {
         margin-left: 20px;
-        font-size: 2rem;
+        font-size: 1.5rem;
         color: $detalles;
       }
     }

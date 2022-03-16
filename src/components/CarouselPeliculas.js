@@ -7,14 +7,12 @@ import Card from "./Card";
 import { cantidadTarjetas } from "../auxiliares/Funciones";
 import Context from "../contexto/Context";
 
-const CarouselPeliculas = ({ tipo, categoria }) => {
+const CarouselPeliculas = ({ url }) => {
   const [peliculas, setPeliculas] = useState([]);
   const contexto = useContext(Context);
 
   useEffect(() => {
-    fetch(
-      `https://api.themoviedb.org/3/${categoria}/${tipo}/week?api_key=252843cc327f9e10875f92a24a03d130&language=${contexto.lenguaje}`
-    )
+    fetch(url)
       .then((res) => res.json())
       .then((data) => setPeliculas(data.results));
   }, [contexto.lenguaje]);
