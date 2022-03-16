@@ -7,12 +7,12 @@ const Footer = () => {
   const lenguajeSeleccionado = useContext(Context).lenguaje;
   
   return (
-    <div className="footer">
+    <footer className="footer">
       <p>{titulosPeliculas[lenguajeSeleccionado].footer}</p>
       <a href="https://www.linkedin.com/in/nataliasoledadnavarro/">
         Naty Navarro
       </a>
-    </div>
+    </footer>
   );
 };
 
