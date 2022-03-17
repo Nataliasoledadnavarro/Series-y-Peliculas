@@ -1,9 +1,9 @@
-import CarouselSeries from "./CarouselSeries";
+import Carousel from "./Carousel";
 import "../styles/components/_Home.scss";
 import { AiOutlineArrowRight } from "react-icons/ai";
 import { useContext } from "react";
 import Context from "../contexto/Context";
-import { titulosSeries } from "../auxiliares/Variables";
+import { apiKey, titulosSeries, urlBase } from "../auxiliares/Variables";
 
 const SeriesFiltro = () => {
   const lenguajeSeleccionado = useContext(Context).lenguaje;
@@ -16,9 +16,9 @@ const SeriesFiltro = () => {
           <AiOutlineArrowRight className="icono-flecha" />
         </div>
 
-        <div className="resultados-busqueda">
-          <CarouselSeries
-            url={`https://api.themoviedb.org/3/tv/popular?api_key=252843cc327f9e10875f92a24a03d130&language=${lenguajeSeleccionado}`}
+        <div className="contenedor-carousel">
+          <Carousel
+            url={`${urlBase}/tv/popular?api_key=${apiKey}&language=${lenguajeSeleccionado}`}
           />
         </div>
       </section>
@@ -28,9 +28,9 @@ const SeriesFiltro = () => {
           <AiOutlineArrowRight className="icono-flecha" />
         </div>
 
-        <div className="resultados-busqueda">
-          <CarouselSeries
-            url={`https://api.themoviedb.org/3/tv/top_rated?api_key=252843cc327f9e10875f92a24a03d130&language=${lenguajeSeleccionado}`}
+        <div className="contenedor-carousel">
+          <Carousel
+            url={`${urlBase}/tv/top_rated?api_key=${apiKey}&language=${lenguajeSeleccionado}`}
           />
         </div>
       </section>
@@ -40,9 +40,9 @@ const SeriesFiltro = () => {
           <AiOutlineArrowRight className="icono-flecha" />
         </div>
 
-        <div className="resultados-busqueda">
-          <CarouselSeries
-            url={`https://api.themoviedb.org/3/tv/on_the_air?api_key=252843cc327f9e10875f92a24a03d130&language=${lenguajeSeleccionado}`}
+        <div className="contenedor-carousel">
+          <Carousel
+            url={`${urlBase}/tv/on_the_air?api_key=${apiKey}&language=${lenguajeSeleccionado}`}
           />
         </div>
       </section>

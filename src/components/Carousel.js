@@ -1,21 +1,13 @@
-import { useState, useEffect, useContext } from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import "../styles/components/_Carousel.scss";
 import Card from "./Card";
 import { cantidadTarjetas } from "../auxiliares/Funciones";
-import Context from "../contexto/Context";
+import useFetch from "../Hooks/useFetch";
 
 const CarouselPeliculas = ({ url }) => {
-  const [peliculas, setPeliculas] = useState([]);
-  const contexto = useContext(Context);
-
-  useEffect(() => {
-    fetch(url)
-      .then((res) => res.json())
-      .then((data) => setPeliculas(data.results));
-  }, [contexto.lenguaje]);
+  const peliculas = useFetch(url);
 
   const settings = {
     className: "carousel",

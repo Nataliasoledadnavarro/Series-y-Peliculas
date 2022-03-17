@@ -1,9 +1,9 @@
-import CarouselPeliculas from "./CarouselPeliculas";
+import Carousel from "./Carousel";
 import "../styles/components/_Home.scss";
 import { AiOutlineArrowRight } from "react-icons/ai";
 import { useContext } from "react";
 import Context from "../contexto/Context";
-import { titulosPeliculas } from "../auxiliares/Variables";
+import { titulosPeliculas, urlBase, apiKey } from "../auxiliares/Variables";
 
 const PeliculasFiltro = () => {
   const lenguajeSeleccionado = useContext(Context).lenguaje;
@@ -16,9 +16,9 @@ const PeliculasFiltro = () => {
           <AiOutlineArrowRight className="icono-flecha" />
         </div>
 
-        <div className="resultados-busqueda">
-          <CarouselPeliculas
-            url={`https://api.themoviedb.org/3/movie/popular?api_key=252843cc327f9e10875f92a24a03d130&language=${lenguajeSeleccionado}`}
+        <div className="contenedor-carousel">
+          <Carousel
+            url={`${urlBase}/movie/popular?api_key=${apiKey}&language=${lenguajeSeleccionado}`}
           />
         </div>
       </section>
@@ -28,9 +28,9 @@ const PeliculasFiltro = () => {
           <AiOutlineArrowRight className="icono-flecha" />
         </div>
 
-        <div className="resultados-busqueda">
-          <CarouselPeliculas
-            url={`https://api.themoviedb.org/3/movie/top_rated?api_key=252843cc327f9e10875f92a24a03d130&language=${lenguajeSeleccionado}`}
+        <div className="contenedor-carousel">
+          <Carousel
+            url={`${urlBase}/movie/top_rated?api_key=${apiKey}&language=${lenguajeSeleccionado}`}
           />
         </div>
       </section>
@@ -40,9 +40,9 @@ const PeliculasFiltro = () => {
           <AiOutlineArrowRight className="icono-flecha" />
         </div>
 
-        <div className="resultados-busqueda">
-          <CarouselPeliculas
-            url={`https://api.themoviedb.org/3/movie/upcoming?api_key=252843cc327f9e10875f92a24a03d130&language=${lenguajeSeleccionado}`}
+        <div className="contenedor-carousel">
+          <Carousel
+            url={`${urlBase}/movie/upcoming?api_key=${apiKey}&language=${lenguajeSeleccionado}`}
           />
         </div>
       </section>
@@ -52,9 +52,9 @@ const PeliculasFiltro = () => {
           <AiOutlineArrowRight className="icono-flecha" />
         </div>
 
-        <div className="resultados-busqueda">
-          <CarouselPeliculas
-            url={`https://api.themoviedb.org/3/movie/now_playing?api_key=252843cc327f9e10875f92a24a03d130&language=${lenguajeSeleccionado}`}
+        <div className="contenedor-carousel">
+          <Carousel
+            url={`${urlBase}/movie/now_playing?api_key=${apiKey}&language=${lenguajeSeleccionado}`}
           />
         </div>
       </section>
