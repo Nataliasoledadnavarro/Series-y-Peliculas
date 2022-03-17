@@ -27,7 +27,7 @@ const Nav = () => {
           </li>
         </Link>
         <Link
-          to="/peliculas/:filtroPeliculas/page/:paginaPeliculas"
+          to="/movie"
           className="link-nav"
         >
           <li>
@@ -35,7 +35,7 @@ const Nav = () => {
           </li>
         </Link>
         <Link
-          to="/series/:filtroSeries/page/:paginaSeries"
+          to="/tv"
           className="link-nav"
         >
           <li>

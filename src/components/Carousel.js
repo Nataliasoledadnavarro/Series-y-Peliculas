@@ -6,8 +6,8 @@ import Card from "./Card";
 import { cantidadTarjetas } from "../auxiliares/Funciones";
 import useFetch from "../Hooks/useFetch";
 
-const CarouselPeliculas = ({ url }) => {
-  const peliculas = useFetch(url);
+const Carousel = ({ url, tipo }) => {
+  const resultados = useFetch(url);
 
   const settings = {
     className: "carousel",
@@ -22,11 +22,11 @@ const CarouselPeliculas = ({ url }) => {
 
   return (
     <Slider {...settings}>
-      {peliculas.map((pelicula) => (
-        <Card resultado={pelicula} />
+      {resultados.map((resultado) => (
+        <Card resultado={resultado} tipo={tipo} />
       ))}
     </Slider>
   );
 };
 
-export default CarouselPeliculas;
+export default Carousel;

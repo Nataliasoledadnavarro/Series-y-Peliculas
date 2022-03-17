@@ -103,3 +103,4 @@ export const titulosPeliculas = {
 export const urlBase = "https://api.themoviedb.org/3"
 
 export const apiKey = "252843cc327f9e10875f92a24a03d130"
+

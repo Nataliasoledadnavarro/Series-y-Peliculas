@@ -19,6 +19,7 @@ const SeriesFiltro = () => {
         <div className="contenedor-carousel">
           <Carousel
             url={`${urlBase}/tv/popular?api_key=${apiKey}&language=${lenguajeSeleccionado}`}
+            tipo="tv"
           />
         </div>
       </section>
@@ -31,6 +32,7 @@ const SeriesFiltro = () => {
         <div className="contenedor-carousel">
           <Carousel
             url={`${urlBase}/tv/top_rated?api_key=${apiKey}&language=${lenguajeSeleccionado}`}
+            tipo="tv"
           />
         </div>
       </section>
@@ -43,6 +45,7 @@ const SeriesFiltro = () => {
         <div className="contenedor-carousel">
           <Carousel
             url={`${urlBase}/tv/on_the_air?api_key=${apiKey}&language=${lenguajeSeleccionado}`}
+            tipo="tv"
           />
         </div>
       </section>

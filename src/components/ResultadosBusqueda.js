@@ -23,7 +23,7 @@ const ResultadosBusqueda = () => {
         </h2>
         <div className="contenedor-resultados">
           {resultados.map((resultado) => (
-            <Card resultado={resultado} />
+            <Card resultado={resultado} tipo={resultado.media_type}/>
           ))}
         </div>
       </section>

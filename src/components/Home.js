@@ -23,7 +23,8 @@ const Home = () => {
 
         <div className="contenedor-carousel">
           <Carousel
-            url={`${urlBase}/trending/movie/week?api_key=${apiKey}&language=${lenguajeSeleccionado}`}
+            url={`${urlBase}/trending/movie/week?api_key=${apiKey}&language=${lenguajeSeleccionado}`} 
+            tipo="movie"
           />
         </div>
       </section>
@@ -36,6 +37,7 @@ const Home = () => {
         <div className="contenedor-carousel">
           <Carousel
             url={`${urlBase}/trending/tv/week?api_key=${apiKey}&language=${lenguajeSeleccionado}`}
+            tipo="tv"
           />
         </div>
       </section>

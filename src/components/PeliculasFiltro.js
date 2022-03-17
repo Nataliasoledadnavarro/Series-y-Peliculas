@@ -19,6 +19,7 @@ const PeliculasFiltro = () => {
         <div className="contenedor-carousel">
           <Carousel
             url={`${urlBase}/movie/popular?api_key=${apiKey}&language=${lenguajeSeleccionado}`}
+            tipo="movie"
           />
         </div>
       </section>
@@ -31,6 +32,7 @@ const PeliculasFiltro = () => {
         <div className="contenedor-carousel">
           <Carousel
             url={`${urlBase}/movie/top_rated?api_key=${apiKey}&language=${lenguajeSeleccionado}`}
+            tipo="movie"
           />
         </div>
       </section>
@@ -43,6 +45,7 @@ const PeliculasFiltro = () => {
         <div className="contenedor-carousel">
           <Carousel
             url={`${urlBase}/movie/upcoming?api_key=${apiKey}&language=${lenguajeSeleccionado}`}
+            tipo="movie"
           />
         </div>
       </section>
@@ -55,7 +58,8 @@ const PeliculasFiltro = () => {
         <div className="contenedor-carousel">
           <Carousel
             url={`${urlBase}/movie/now_playing?api_key=${apiKey}&language=${lenguajeSeleccionado}`}
-          />
+            tipo="movie"
+         />
         </div>
       </section>
     </div>
