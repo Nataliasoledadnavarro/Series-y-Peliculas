@@ -14,7 +14,7 @@ const Busqueda = () => {
   };
 
   const handleChange = (e) => {
-  setValorDelInput(e.target.value)
+    setValorDelInput(e.target.value);
   };
 
   return (
