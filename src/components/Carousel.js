@@ -5,8 +5,9 @@ import "../styles/components/_Carousel.scss";
 import Card from "./Card";
 import { cantidadTarjetas } from "../auxiliares/Funciones";
 import useFetch from "../Hooks/useFetch";
+import { AiOutlineArrowRight } from "react-icons/ai";
 
-const Carousel = ({ url, tipo }) => {
+const Carousel = ({ url, tipo, titulo }) => {
   const resultados = useFetch(url);
 
   const settings = {
@@ -21,11 +22,19 @@ const Carousel = ({ url, tipo }) => {
   };
 
   return (
-    <Slider {...settings}>
+    <div className="carousel">
+      <div className="contenedor-titulo">
+        <h2>{titulo}</h2>
+        <AiOutlineArrowRight className="icono-flecha" />
+      </div>
+      <div className="contenedor-carousel">
+      <Slider {...settings}>
       {resultados.map((resultado) => (
         <Card resultado={resultado} tipo={tipo} />
       ))}
     </Slider>
+      </div>
+    </div>
   );
 };
 
