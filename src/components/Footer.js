@@ -1,14 +1,14 @@
 import "../styles/components/_Footer.scss";
 import { useContext } from "react";
 import Context from "../contexto/Context";
-import { titulosPeliculas } from "../auxiliares/Variables";
+import { titulosComunes } from "../auxiliares/Variables";
 
 const Footer = () => {
   const lenguajeSeleccionado = useContext(Context).lenguaje;
   
   return (
     <footer className="footer">
-      <p>{titulosPeliculas[lenguajeSeleccionado].footer}</p>
+      <p>{titulosComunes[lenguajeSeleccionado].footer}</p>
       <a href="https://www.linkedin.com/in/nataliasoledadnavarro/">
         Naty Navarro
       </a>

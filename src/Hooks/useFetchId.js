@@ -4,18 +4,18 @@ import { useParams } from "react-router-dom";
 import Context from "../contexto/Context";
 import { urlBase, apiKey } from "../auxiliares/Variables";
 
-const useFetch = (tipo, id) => {
+const useFetchId = () => {
   const lenguajeSeleccionado = useContext(Context).lenguaje;
   const [resultado, setResultado] = useState({});
   const params = useParams();
 
   useEffect(() => {
-    fetch(`${urlBase}/${tipo}/${params.id}?api_key=${apiKey}&language=${lenguajeSeleccionado}`)
+    fetch(`${urlBase}/${params.tipo}/${params.id}?api_key=${apiKey}&language=${lenguajeSeleccionado}`)
       .then((res) => res.json())
       .then((data) => setResultado(data));
-  }, [lenguajeSeleccionado, params.id]);
+  }, [lenguajeSeleccionado, params.id, params.tipo]);
 
   return resultado
 };
 
-export default useFetch;
+export default useFetchId;

@@ -1,0 +1,11 @@
+section {
+  .header-info {
+    height: 700px;
+    overflow: hidden;
+
+    img {
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+}
