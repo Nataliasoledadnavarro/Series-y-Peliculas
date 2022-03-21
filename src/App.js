@@ -41,20 +41,24 @@ const App = () => {
         <Route path="/" element={<Home />}/>{/*muestra series y peliculas que son tendencia.*/}
 
         <Route path="/movie" element={<PeliculasCategorias />} />{/*muestra peliculas: populares/mejores criticas/ a estrenarse/ en cine.*/}
-        <Route path="/movie/:id/info" element={<InfoGeneral />} /> {/*Detalle info de la pelicula/serie elegida*/}
+        <Route path="/:tipo/:id/info" element={<InfoGeneral />} /> {/*Detalle info de la pelicula/serie elegida*/}
         <Route path="/tv" element={<SeriesPorCategorias />}/> {/*muestra series: populares/mejores criticas/ al aire*/}
-        <Route path="/tv/:id/info" element={<InfoGeneral />} /> {/*Detalle info de la pelicula/serie elegida*/}
+        <Route path="/:tipo/:id/info" element={<InfoGeneral />} /> {/*Detalle info de la pelicula/serie elegida*/}
         <Route path="/busqueda/:nombreBusqueda/page/:paginaBusqueda" element={<ResultadosBusqueda />}/> {/*Redirecciona a los resultados de la busqueda. */}
-
+        <Route path="/:tipo/:id/reparto" element={<Reparto />} /> {/*Reparto de la serie/pelicula*/}
+        <Route path="/:tipo/:id/similares" element={<Similares />} /> {/*Peliculas/Series similares de la pelicula elegida*/}
+        <Route path="/tv/:id/temporada/1" element={<EpisodiosSerie />}/> {/*Episodios de la serie elegida*/}
+        <Route path="/movie/:id/videos" element={<VideoPelicula />}/> {/*Videos de la pelicula elegida*/}
+        
+        
         <Route path="/peliculas/:filtroPeliculas/page/:paginaPeliculas"element={<PeliculasCategorias />}/>{/*muestra todas las peliculas disponible segun el parametro elegido.*/}
-        <Route path="/peliculas/:idPelicula/video" element={<VideoPelicula />}/> {/*Videos de la pelicula elegida*/}
-        <Route path="/peliculas/:idPelicula/similar" element={<Similares />} /> {/*Peliculas/Series similares de la pelicula elegida*/}
-        <Route path="/peliculas/:idPelicula/reparto" element={<Reparto />} /> {/*Reparto de la serie/pelicula*/}
+        
+        
+        
         <Route path="/persona/:idPelicula/info" element={<PersonaInfo />} /> {/*Detalle del actor/actriz seleccionado*/}
         <Route path="/persona/:idPelicula/creditos"element={<PersonaCreditos />}/> {/*Creditos del actor/actriz seleccionado*/}
         <Route path="/series/:filtroSeries/page/:paginaSeries" element={<SeriesCategorias />}/> {/*muestra todas las series disponibles segun el parametro elegido.*/}
-        <Route path="/series/:idSerie/episodios/:temporadaSerie" element={<EpisodiosSerie />}/> {/*Episodios de la serie elegida*/}
-        <Route path="/series/:idSerie/reparto" element={<Reparto />} />{/*Reparto de la serie/pelicula*/}
+        
         <Route path="/series/:idSerie/similares" element={<Similares />} />{/*Reparto de la serie/pelicula*/}
 
         <Route path="*" element={<Error404 />} />

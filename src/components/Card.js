@@ -1,24 +1,17 @@
 import "../styles/components/_Card.scss";
-import img from "../img/imagen-no-encontrada.jpg";
+import { mostrarImagen } from "../auxiliares/Funciones";
 import { Link } from "react-router-dom";
 
 const Card = ({ resultado, tipo}) => {
-  const mostrarImagen = (resultado) => {
-    if (resultado.profile_path) {
-      return `https://image.tmdb.org/t/p/w300/${resultado.profile_path}`;
-    } else if (resultado.poster_path) {
-      return `https://image.tmdb.org/t/p/w300/${resultado.poster_path}`;
-    } else {
-      return img;
-    }
-  };
+  const src= mostrarImagen(resultado,"w300")
+   
 
   return (
-    <Link to={`/${tipo}/${resultado.id}/info`}>
-      <article key={resultado.id} className="tarjeta">
+    <Link to={`/${tipo}/${resultado.id}/info`} key={resultado.id}>
+      <article  className="tarjeta">
         <div className="contenedor-img">
           <img
-            src={mostrarImagen(resultado)}
+            src={src}
             alt={resultado.title ? resultado.title : resultado.name}
           ></img>
         </div>
