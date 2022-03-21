@@ -1,28 +1,55 @@
 @import "../utilidades/Variables";
+@import "../utilidades/Mixin";
 
-.slick-slider {
-  width: 95%;
+.carousel {
   margin: auto;
-  color: $detalles;
-  .slick-prev:before,
-  .slick-next:before {
-    color: $detalles;
-    font-size: 24px;
-  }
-  .slick-dots li button:before {
-    color: $detalles;
-    font-size: 8px;
-  }
-  .slick-slide{
+  .contenedor-titulo {
     display: flex;
     align-items: center;
-    justify-content: center;
+    margin-top: 30px;
+    h2 {
+      @include h2-secciones;
+    }
+    .icono-flecha {
+      margin-left: 20px;
+      font-size: 1.5rem;
+      color: $detalles;
+    }
+  }
+  .slick-slider {
+    width: 95%;
+    margin: auto;
+    color: $detalles;
+    .slick-prev:before,
+    .slick-next:before {
+      color: $detalles;
+      font-size: 24px;
+    }
+    .slick-dots li button:before {
+      color: $detalles;
+      font-size: 8px;
+    }
+    .slick-slide {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+}
 
+
+@media screen and (max-width: 900px) {
+  .carousel {
+    .slick-slider {
+      width: 90%;
+    }
   }
 }
 
 @media screen and (max-width: 500px) {
-  .slick-slider {
-    width: 80%;
+  .carousel {
+    .slick-slider {
+      width: 80%;
+    }
   }
 }
