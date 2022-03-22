@@ -1,0 +1,16 @@
+@import "../utilidades/Variables";
+
+.contenedor-iconos{
+    width: 150px;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 60px;
+    svg{
+        color: $blanco;
+        font-size: 1.5rem;
+    }
+    svg:hover{
+        color:$detalles
+    }
+    
+}

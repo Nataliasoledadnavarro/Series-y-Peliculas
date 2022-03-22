@@ -7,15 +7,13 @@ import { useContext } from "react";
 import Context from "../contexto/Context";
 import { titulosComunes } from "../auxiliares/Variables";
 import { estrellas, produccion, generos } from "../auxiliares/Funciones";
+import Redes from "../components/Redes"
 
 const InfoGeneral = () => {
   const info = useFetchId();
   const params = useParams();
   const lenguajeSeleccionado = useContext(Context).lenguaje;
-
-  console.log(info);
-  console.log(info.production_companies);
-
+console.log(params)
   return (
     <section className="seccion-info">
       <div className="header-info">
@@ -73,9 +71,10 @@ const InfoGeneral = () => {
           </ul>
 
           <ul className="lista-generos">
-            {titulosComunes[lenguajeSeleccionado].generos}
+            {titulosComunes[lenguajeSeleccionado].genero}
             {info.genres && generos(info.genres, params.tipo)}
           </ul>
+          <Redes/>
         </div>
       </div>
     </section>
