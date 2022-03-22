@@ -74,9 +74,8 @@ const InfoGeneral = () => {
 
           <ul className="lista-generos">
             {titulosComunes[lenguajeSeleccionado].generos}
-            {info.genres && generos(info.genres)}
+            {info.genres && generos(info.genres, params.tipo)}
           </ul>
-
         </div>
       </div>
     </section>

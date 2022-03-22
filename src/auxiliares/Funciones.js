@@ -71,11 +71,11 @@ export const produccion = (array) => {
 
 // LISTADO DE GENEROS
 
-export const generos = (array) => {
-  
+export const generos = (array, tipo) => {
+ 
 
   const generos = array.map((genero) => (
-    <Link to={`/movie/${genero.name}/${genero.id}/page/1`} key={genero.id}>
+    <Link to={`/${tipo}/${genero.name}/${genero.id}/page/1`} key={genero.id}>
       <li>{genero.name}</li>
     </Link>
   ));

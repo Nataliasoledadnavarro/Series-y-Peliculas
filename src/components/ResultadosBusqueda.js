@@ -1,7 +1,7 @@
 import { useParams } from "react-router-dom";
-import { useState, useContext } from "react";
+import {  useContext } from "react";
 import Card from "../components/Card";
-import "../styles/components/_Resultados-busqueda.scss";
+import "../styles/components/_Resultados.scss";
 import { capitalizar } from "../auxiliares/Funciones";
 import Context from "../contexto/Context";
 import { titulosComunes, urlBase, apiKey } from "../auxiliares/Variables";
