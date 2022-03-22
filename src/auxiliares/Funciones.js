@@ -4,10 +4,14 @@ import {
   AiFillStar as EstrellaCompleta,
 } from "react-icons/ai";
 
+import { Link } from "react-router-dom";
+
+// CAPITALIZAR
 export const capitalizar = (str) => {
   return str.charAt(0).toUpperCase() + str.slice(1).toLowerCase();
 };
 
+// RESPONSIVE CAROUSEL
 export const cantidadTarjetas = () => {
   const tamañoPantalla = window.innerWidth;
 
@@ -24,6 +28,7 @@ export const cantidadTarjetas = () => {
   }
 };
 
+// URL DE IMAGENES
 export const mostrarImagen = (resultado, tamaño) => {
   if (resultado.profile_path) {
     return `https://image.tmdb.org/t/p/${tamaño}${resultado.profile_path}`;
@@ -34,6 +39,7 @@ export const mostrarImagen = (resultado, tamaño) => {
   }
 };
 
+// ARMADO DE RATING CON ESTRELLAS
 export const estrellas = (valoracion) => {
   const estrellas = [];
 
@@ -54,11 +60,25 @@ export const estrellas = (valoracion) => {
   return estrellas;
 };
 
-export const produccion = (array) =>{
-  const producciones = array.map((resultado) => (
-    <span>"{resultado.name}"</span>
-  ))
 
-  return producciones
+// LISTADO DE PRODUCCION
+export const produccion = (array) => {
+  const producciones = array.map((resultado) => <li>{resultado.name}</li>);
+
+  return producciones;
+};
+
+
+// LISTADO DE GENEROS
+
+export const generos = (array) => {
   
-}
+
+  const generos = array.map((genero) => (
+    <Link to={`/movie/${genero.name}/${genero.id}/page/1`} key={genero.id}>
+      <li>{genero.name}</li>
+    </Link>
+  ));
+
+  return (generos)
+};
