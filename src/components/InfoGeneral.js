@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 import { useContext } from "react";
 import Context from "../contexto/Context";
 import { titulosComunes } from "../auxiliares/Variables";
-import { estrellas, produccion } from "../auxiliares/Funciones";
+import { estrellas, produccion, generos } from "../auxiliares/Funciones";
 
 const InfoGeneral = () => {
   const info = useFetchId();
@@ -63,16 +63,20 @@ const InfoGeneral = () => {
           </div>
           <p className="descripcion">{info.overview}</p>
           <p className="item-descripcion">
-            {titulosComunes[lenguajeSeleccionado].duracion} : {info.runtime} min
+            {info.runtime &&
+              `${titulosComunes[lenguajeSeleccionado].duracion} ${info.runtime} min.`}
           </p>
-          <p className="item-descripcion">
-            {titulosComunes[lenguajeSeleccionado].produccion} :
-            {info.production_companies.lenght > 1 ? (
-              produccion(info.production_companies)
-            ) : (
-              <span> -</span>
-            )}
-          </p>
+
+          <ul className="item-descripcion">
+            {titulosComunes[lenguajeSeleccionado].produccion}
+            {info.production_companies && produccion(info.production_companies)}
+          </ul>
+
+          <ul className="lista-generos">
+            {titulosComunes[lenguajeSeleccionado].generos}
+            {info.genres && generos(info.genres)}
+          </ul>
+
         </div>
       </div>
     </section>
