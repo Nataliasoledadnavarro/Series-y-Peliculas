@@ -1,4 +1,8 @@
 import img from "../img/imagen-no-encontrada.jpg";
+import {
+  AiOutlineStar as EstrellaVacia,
+  AiFillStar as EstrellaCompleta,
+} from "react-icons/ai";
 
 export const capitalizar = (str) => {
   return str.charAt(0).toUpperCase() + str.slice(1).toLowerCase();
@@ -30,3 +34,31 @@ export const mostrarImagen = (resultado, tamaño) => {
   }
 };
 
+export const estrellas = (valoracion) => {
+  const estrellas = [];
+
+  for (let i = 0; i < valoracion; i++) {
+    estrellas.push(
+      <div className="icono">
+        <EstrellaCompleta />
+      </div>
+    );
+  }
+  for (let i = 0; i < 10 - valoracion; i++) {
+    estrellas.push(
+      <div className="icono">
+        <EstrellaVacia />
+      </div>
+    );
+  }
+  return estrellas;
+};
+
+export const produccion = (array) =>{
+  const producciones = array.map((resultado) => (
+    <span>"{resultado.name}"</span>
+  ))
+
+  return producciones
+  
+}
