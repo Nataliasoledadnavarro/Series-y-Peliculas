@@ -24,7 +24,7 @@ const Generos = () => {
         </h2>
         <div className="contenedor-resultados">
           {resultados.map((resultado) => (
-            <Card resultado={resultado} tipo={resultado.media_type} />
+            <Card resultado={resultado} tipo={params.tipo} />
           ))}
         </div>
       </section>
