@@ -13,7 +13,8 @@ const InfoGeneral = () => {
   const info = useFetchId();
   const params = useParams();
   const lenguajeSeleccionado = useContext(Context).lenguaje;
-console.log(params)
+console.log(info)
+
   return (
     <section className="seccion-info">
       <div className="header-info">
@@ -74,7 +75,7 @@ console.log(params)
             {titulosComunes[lenguajeSeleccionado].genero}
             {info.genres && generos(info.genres, params.tipo)}
           </ul>
-          <Redes/>
+          <Redes homePage={info.homepage}/>
         </div>
       </div>
     </section>
