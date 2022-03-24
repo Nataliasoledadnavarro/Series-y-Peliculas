@@ -1,0 +1,24 @@
+@import "../utilidades/Variables";
+
+
+    .header-info {
+        height: 700px;
+        overflow: hidden;
+        img {
+          width: 100%;
+          object-fit: cover;
+        }
+      }
+      .contenedor-links {
+        display: flex;
+        justify-content: center;
+        a {
+          font-size: 1.2rem;
+          margin: 20px;
+          color: $blanco;
+        }
+        a:hover {
+          text-decoration: overline $background-claro;
+        }
+    }
+      
