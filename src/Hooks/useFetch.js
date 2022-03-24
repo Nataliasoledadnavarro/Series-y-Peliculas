@@ -5,16 +5,16 @@ import Context from "../contexto/Context";
 
 const useFetch = (url) => {
   const lenguajeSeleccionado = useContext(Context).lenguaje;
-  const [peliculas, setPeliculas] = useState([]);
+  const [resultado, setResultado] = useState([]);
   const params = useParams();
 
   useEffect(() => {
     fetch(url)
       .then((res) => res.json())
-      .then((data) => setPeliculas(data.results));
+      .then((data) => setResultado(data.results));
   }, [lenguajeSeleccionado, params.nombreBusqueda]);
 
-  return peliculas;
+  return resultado;
 };
 
 export default useFetch;
