@@ -5,16 +5,29 @@ import Context from "../contexto/Context";
 
 const useFetch = (url) => {
   const lenguajeSeleccionado = useContext(Context).lenguaje;
-  const [resultado, setResultado] = useState([]);
+  const [resultados, setResultados] = useState([]);
+  const [page, setPage] = useState(1);
+  const [totalPages, setTotalPages] = useState(0)
+  const [cast, setCast] = useState([])
   const params = useParams();
 
   useEffect(() => {
     fetch(url)
       .then((res) => res.json())
-      .then((data) => setResultado(data.results));
+      .then(data => {
+        setResultados(data.results);
+        setTotalPages(data.total_pages)
+        setPage(data.page);
+        setCast(data.cast)
+      });
   }, [lenguajeSeleccionado, params.nombreBusqueda]);
 
-  return resultado;
+  return {
+    resultados: resultados,
+    page: page,
+    totalPages:totalPages,
+    cast: cast,
+  }
 };
 
 export default useFetch;

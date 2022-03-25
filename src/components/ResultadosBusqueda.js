@@ -1,5 +1,5 @@
 import { useParams } from "react-router-dom";
-import {  useContext } from "react";
+import { useContext } from "react";
 import Card from "../components/Card";
 import "../styles/components/_Resultados.scss";
 import { capitalizar } from "../auxiliares/Funciones";
@@ -11,8 +11,7 @@ const ResultadosBusqueda = () => {
   const params = useParams();
   const lenguajeSeleccionado = useContext(Context).lenguaje;
   //let [paginaActual, setPaginaActual] = useState(1);
-
-  const resultados = useFetch(
+  const { resultados, page, totalPages, cast } = useFetch(
     `${urlBase}/search/multi?api_key=${apiKey}&language=${lenguajeSeleccionado}&query=${params.nombreBusqueda}&page=1`
   );
 
