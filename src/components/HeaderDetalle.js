@@ -13,7 +13,7 @@ const HeaderDetalle = () => {
   const lenguajeSeleccionado = useContext(Context).lenguaje;
 
   return (
-    <>
+    <section>
       <div className="header-info">
         <img
           src={mostrarImagen(info, "original")}
@@ -44,7 +44,7 @@ const HeaderDetalle = () => {
           <h3>{titulosComunes[lenguajeSeleccionado].similares}</h3>
         </Link>
       </div>
-    </>
+    </section>
   );
 };
 

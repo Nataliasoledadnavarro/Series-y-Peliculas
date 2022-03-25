@@ -8,7 +8,8 @@ import useFetch from "../Hooks/useFetch";
 import { AiOutlineArrowRight } from "react-icons/ai";
 
 const Carousel = ({ url, tipo, titulo }) => {
-  const resultados = useFetch(url);
+
+  const { resultados,page,totalPages,cast } = useFetch(url);
 
   const settings = {
     className: "carousel",
@@ -28,11 +29,11 @@ const Carousel = ({ url, tipo, titulo }) => {
         <AiOutlineArrowRight className="icono-flecha" />
       </div>
       <div className="contenedor-carousel">
-      <Slider {...settings}>
-      {resultados.map((resultado) => (
-        <Card resultado={resultado} tipo={tipo} />
-      ))}
-    </Slider>
+        <Slider {...settings}>
+          {resultados.map((resultado) => (
+            <Card resultado={resultado} tipo={tipo} />
+          ))}
+        </Slider>
       </div>
     </div>
   );
