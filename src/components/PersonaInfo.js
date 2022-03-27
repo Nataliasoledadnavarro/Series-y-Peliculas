@@ -12,15 +12,15 @@ const PersonaInfo = () => {
   const params = useParams();
   const lenguajeSeleccionado = useContext(Context).lenguaje;
   const [resultado, setResultado] = useState({});
-  console.log(resultado)
+  console.log(resultado);
 
-  
   useEffect(() => {
-    fetch(  `${urlBase}/person/${params.id}?api_key=${apiKey}&language=${lenguajeSeleccionado}`)
+    fetch(
+      `${urlBase}/person/${params.id}?api_key=${apiKey}&language=${lenguajeSeleccionado}`
+    )
       .then((res) => res.json())
-      .then((data) => setResultado(data))
-  }, [lenguajeSeleccionado])
-
+      .then((data) => setResultado(data));
+  }, [lenguajeSeleccionado]);
 
   return (
     <section>
@@ -44,7 +44,17 @@ const PersonaInfo = () => {
           <h3>{resultado.title ? resultado.title : resultado.name}</h3>
 
           <p className="descripcion">{resultado.biography}</p>
-
+          {resultado.birthday && (
+            <p className="item-descripcion">
+              {titulosComunes[lenguajeSeleccionado].fecha} {resultado.birthday}
+            </p>
+          )}
+          {resultado.place_of_birth && (
+            <p className="item-descripcion">
+              {titulosComunes[lenguajeSeleccionado].lugar}{" "}
+              {resultado.place_of_birth}
+            </p>
+          )}
           <Redes homePage={resultado.homepage} tipo="person" />
         </div>
       </div>
