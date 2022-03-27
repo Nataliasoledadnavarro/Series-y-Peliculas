@@ -6,7 +6,7 @@ import { useContext } from "react";
 import Context from "../contexto/Context";
 import { urlBase, apiKey } from "../auxiliares/Variables";
 import HeaderDetalle from "./HeaderDetalle";
-import "../styles/components/_Resultados.scss";
+
 
 const Reparto = () => {
   const params = useParams();

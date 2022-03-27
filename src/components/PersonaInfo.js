@@ -4,15 +4,13 @@ import { mostrarImagen } from "../auxiliares/Funciones";
 import "../styles/components/_Info-general.scss";
 import "../styles/components/_Header-detalle.scss";
 import Context from "../contexto/Context";
-import { titulosComunes } from "../auxiliares/Variables";
 import Redes from "../components/Redes";
-import { urlBase, apiKey } from "../auxiliares/Variables";
+import { urlBase, apiKey, titulosComunes } from "../auxiliares/Variables";
 
 const PersonaInfo = () => {
   const params = useParams();
   const lenguajeSeleccionado = useContext(Context).lenguaje;
   const [resultado, setResultado] = useState({});
-  console.log(resultado);
 
   useEffect(() => {
     fetch(
@@ -20,7 +18,7 @@ const PersonaInfo = () => {
     )
       .then((res) => res.json())
       .then((data) => setResultado(data));
-  }, [lenguajeSeleccionado]);
+  }, [lenguajeSeleccionado, resultado]);
 
   return (
     <section>
