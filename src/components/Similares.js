@@ -15,7 +15,7 @@ const Similares = () => {
   const { resultados, page, totalPages, cast } = useFetch(
     `${urlBase}/${params.tipo}/${params.id}/similar?api_key=${apiKey}&language=${lenguajeSeleccionado}&page=1`
   );
- 
+
   return (
     <>
       <HeaderDetalle />
@@ -23,7 +23,11 @@ const Similares = () => {
         <section>
           <div className="contenedor-resultados">
             {resultados.map((resultado) => (
-              <Card resultado={resultado} tipo={params.tipo} />
+              <Card
+                resultado={resultado}
+                tipo={params.tipo}
+                key={resultado.id}
+              />
             ))}
           </div>
         </section>

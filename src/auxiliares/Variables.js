@@ -87,6 +87,8 @@ export const titulosComunes = {
   es: {
     info: "Info",
     reparto: "Reparto",
+    informacion:"Información", 
+    creditos:"Creditos",
     videos: "Videos",
     episodios: "Episodios",
     temporada: "Temporada",
@@ -101,6 +103,8 @@ export const titulosComunes = {
   in: {
     info: "Info",
     reparto: "Distribution",
+    informacion:"Information", 
+    creditos:"Credits",
     videos: "Videos",
     episodios: "Episodes",
     temporada: "season",
@@ -115,6 +119,8 @@ export const titulosComunes = {
   ja: {
     info: "情報",
     reparto: "分布",
+    informacion:"情報", 
+    creditos:"クレジット",
     videos: "ビデオ",
     episodios: "エピソード",
     temporada: "季節",
@@ -129,6 +135,8 @@ export const titulosComunes = {
   la: {
     info: "Info",
     reparto: "Distributio",
+    informacion:"Informationes", 
+    creditos:"Credit",
     videos: "Videos",
     episodios: "Episodes",
     temporada: "Tempore",
@@ -143,6 +151,8 @@ export const titulosComunes = {
   fr: {
     info: "Info",
     reparto: "Distribution",
+    informacion:"Information", 
+    creditos:"Crédits",
     videos: "Vidéos",
     episodios: "Épisodes",
     temporada: "saison",
@@ -157,6 +167,8 @@ export const titulosComunes = {
   pt: {
     info: "informação",
     reparto: "Distribuição",
+    informacion:"Em formação", 
+    creditos:"Créditos",
     videos: "Vídeos",
     episodios: "Episódios",
     temporada: "Estação",

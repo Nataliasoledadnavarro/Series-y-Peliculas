@@ -7,16 +7,17 @@ import Context from "../contexto/Context";
 import { titulosComunes } from "../auxiliares/Variables";
 import { estrellas, produccion, generos } from "../auxiliares/Funciones";
 import Redes from "../components/Redes";
+
 import HeaderDetalle from "./HeaderDetalle";
 
 const InfoGeneral = () => {
-  const info = useFetchId();
   const params = useParams();
   const lenguajeSeleccionado = useContext(Context).lenguaje;
+  const info = useFetchId();
 
   return (
     <section className="seccion-detalle">
-      <HeaderDetalle/>
+      <HeaderDetalle />
       <div className="contenedor-info">
         <div className="poster">
           <img
@@ -27,7 +28,7 @@ const InfoGeneral = () => {
         <div className="contenedor-descripcion">
           <h3>{info.title ? info.title : info.name}</h3>
           <div className="contenedor-estrellas">
-            {estrellas(Math.round(info.vote_average))}{" "}
+            {estrellas(Math.round(info.vote_average))}
           </div>
           <p className="descripcion">{info.overview}</p>
           <p className="item-descripcion">
@@ -44,7 +45,7 @@ const InfoGeneral = () => {
             {titulosComunes[lenguajeSeleccionado].genero}
             {info.genres && generos(info.genres, params.tipo)}
           </ul>
-          <Redes homePage={info.homepage} />
+          <Redes homePage={info.homepage} tipo={params.tipo} />
         </div>
       </div>
     </section>

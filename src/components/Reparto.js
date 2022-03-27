@@ -12,7 +12,7 @@ const Reparto = () => {
   const params = useParams();
   const lenguajeSeleccionado = useContext(Context).lenguaje;
   const { resultados,page,totalPages,cast } = useFetch(`${urlBase}/${params.tipo}/${params.id}/credits?api_key=${apiKey}&language=${lenguajeSeleccionado}&page=1`);
-console.log(cast)
+
   return (
     <>
       <HeaderDetalle />

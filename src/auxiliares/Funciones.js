@@ -45,14 +45,14 @@ export const estrellas = (valoracion) => {
 
   for (let i = 0; i < valoracion; i++) {
     estrellas.push(
-      <div className="icono">
+      <div className="icono" key={i}>
         <EstrellaCompleta />
       </div>
     );
   }
   for (let i = 0; i < 10 - valoracion; i++) {
     estrellas.push(
-      <div className="icono">
+      <div className="icono" key={i + 10}>
         <EstrellaVacia />
       </div>
     );
@@ -60,25 +60,23 @@ export const estrellas = (valoracion) => {
   return estrellas;
 };
 
-
 // LISTADO DE PRODUCCION
 export const produccion = (array) => {
-  const producciones = array.map((resultado) => <li>{resultado.name}</li>);
+  const producciones = array.map((resultado, index) => (
+    <li key={index}>{resultado.name}</li>
+  ));
 
   return producciones;
 };
 
-
 // LISTADO DE GENEROS
 
 export const generos = (array, tipo) => {
- 
-
-  const generos = array.map((genero) => (
+  const generos = array.map((genero, index) => (
     <Link to={`/${tipo}/${genero.name}/${genero.id}/page/1`} key={genero.id}>
-      <li>{genero.name}</li>
+      <li key={index}>{genero.name}</li>
     </Link>
   ));
 
-  return (generos)
+  return generos;
 };
