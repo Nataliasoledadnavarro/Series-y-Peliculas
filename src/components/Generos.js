@@ -10,7 +10,7 @@ const Generos = () => {
   const params = useParams();
   const lenguajeSeleccionado = useContext(Context).lenguaje;
   //let [paginaActual, setPaginaActual] = useState(1);
-  const resultados = useFetch(
+  const { resultados, page, totalPages, cast } = useFetch(
     `${urlBase}/discover/${params.tipo}?api_key=${apiKey}&language=${lenguajeSeleccionado}&with_genres=${params.id}&page=1`
   );
 
@@ -23,7 +23,7 @@ const Generos = () => {
         </h2>
         <div className="contenedor-resultados">
           {resultados.map((resultado) => (
-            <Card resultado={resultado} tipo={params.tipo} />
+            <Card resultado={resultado} tipo={params.tipo} key={resultado.id} />
           ))}
         </div>
       </section>

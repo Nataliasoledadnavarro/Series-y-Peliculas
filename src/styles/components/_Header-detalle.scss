@@ -1,4 +1,5 @@
 @import "../utilidades/Variables";
+@import "../utilidades/Mixin";
 
 section {
   .header-info {
@@ -13,13 +14,6 @@ section {
     display: flex;
     justify-content: center;
     background-color: $negro;
-    a {
-      font-size: 1.2rem;
-      margin: 20px;
-      color: $blanco;
-    }
-    a:hover {
-      text-decoration: overline $background-claro;
-    }
+    @include titulo-link
   }
 }

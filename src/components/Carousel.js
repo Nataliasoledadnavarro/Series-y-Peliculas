@@ -31,7 +31,7 @@ const Carousel = ({ url, tipo, titulo }) => {
       <div className="contenedor-carousel">
         <Slider {...settings}>
           {resultados.map((resultado) => (
-            <Card resultado={resultado} tipo={tipo} />
+            <Card resultado={resultado} tipo={tipo} key={resultado.id}/>
           ))}
         </Slider>
       </div>

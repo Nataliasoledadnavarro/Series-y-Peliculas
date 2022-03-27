@@ -1,16 +1,16 @@
 import "../styles/components/_Header-detalle.scss";
+import useFetchId from "../Hooks/useFetchId";
 import { Link } from "react-router-dom";
 import { mostrarImagen } from "../auxiliares/Funciones";
 import { useParams } from "react-router-dom";
-import useFetchId from "../Hooks/useFetchId";
 import { titulosComunes } from "../auxiliares/Variables";
 import { useContext } from "react";
 import Context from "../contexto/Context";
 
 const HeaderDetalle = () => {
-  const info = useFetchId();
   const params = useParams();
   const lenguajeSeleccionado = useContext(Context).lenguaje;
+  const info = useFetchId();
 
   return (
     <section>

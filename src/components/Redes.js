@@ -2,17 +2,16 @@ import "../styles/components/_Redes.scss";
 import { useState, useEffect } from "react";
 import { urlBase, apiKey } from "../auxiliares/Variables";
 import { useParams } from "react-router-dom";
-
 import { SiImdb, SiFacebook, SiInstagram, SiTwitter } from "react-icons/si";
 import { BsLink } from "react-icons/bs";
 
-const Redes = ({ homePage }) => {
+const Redes = ({ homePage, tipo }) => {
   const [redes, setRedes] = useState({});
   const params = useParams();
 
   useEffect(() => {
     fetch(
-      `${urlBase}/${params.tipo}/${params.id}/external_ids?api_key=${apiKey}`
+      `${urlBase}/${tipo}/${params.id}/external_ids?api_key=${apiKey}`
     )
       .then((res) => res.json())
       .then((data) => setRedes(data));
