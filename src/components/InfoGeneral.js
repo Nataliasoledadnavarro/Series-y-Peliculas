@@ -7,7 +7,6 @@ import Context from "../contexto/Context";
 import { titulosComunes } from "../auxiliares/Variables";
 import { estrellas, produccion, generos } from "../auxiliares/Funciones";
 import Redes from "../components/Redes";
-
 import HeaderDetalle from "./HeaderDetalle";
 
 const InfoGeneral = () => {

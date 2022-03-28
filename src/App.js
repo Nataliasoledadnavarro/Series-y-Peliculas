@@ -49,12 +49,11 @@ const App = () => {
         <Route path="/:tipo/:id/reparto" element={<Reparto />} /> {/*Reparto de la serie/pelicula*/}
         <Route path="/:tipo/:id/similares" element={<Similares />} /> {/*Peliculas/Series similares de la pelicula elegida*/}
         <Route path="/tv/:id/temporada/1" element={<EpisodiosSerie />}/> {/*Episodios de la serie elegida*/}
-        <Route path="/movie/:id/videos" element={<VideoPelicula />}/> {/*Videos de la pelicula elegida*/}
         <Route path="/:tipo/:genero/:id/page/1" element={<Generos />} /> {/*Reparto de la serie/pelicula*/}
         <Route path="/person/:id/info" element={<PersonaInfo />} /> {/*Detalle del actor/actriz seleccionado*/}
         <Route path="/person/:id/creditos"element={<PersonaCreditos />}/> {/*Creditos del actor/actriz seleccionado*/}
         <Route path="/peliculas/:filtroPeliculas/page/:paginaPeliculas"element={<PeliculasCategorias />}/>{/*muestra todas las peliculas disponible segun el parametro elegido.*/}
-        
+        <Route path="/:tipo/:id/videos" element={<VideoPelicula />}/> {/*Videos de la pelicula elegida*/}
         
         
 
