@@ -102,6 +102,8 @@ export const titulosComunes = {
     buscar: "Buscar",
     resultados: "Resultados para: ",
     footer: "Realizado por",
+    error:"¡Ups! Ruta no encontrada",
+    home: "Ir a Home"
   },
   in: {
     info: "Info",
@@ -121,6 +123,8 @@ export const titulosComunes = {
     buscar: "Search for",
     resultados: "Results for: ",
     footer: "Made by",
+    error:"Oops! path not found",
+    home: "Go to Home"
   },
   ja: {
     info: "情報",
@@ -140,6 +144,8 @@ export const titulosComunes = {
     buscar: "検索する",
     resultados: "結果: ",
     footer: "作られた",
+    error:"おっと！パスが見つかりません",
+    home: "家に帰る"
   },
   la: {
     info: "Info",
@@ -159,6 +165,8 @@ export const titulosComunes = {
     buscar: "Quarere",
     resultados: "Results for: ",
     footer: "Factum per",
+    error:"Oops! iter non inveni",
+    home: "Vade ad Home"
   },
   fr: {
     info: "Info",
@@ -178,6 +186,8 @@ export const titulosComunes = {
     buscar: "Chercher",
     resultados: "Résultats pour: ",
     footer: "Réalisé par",
+    error:"Oups! chemin introuvable",
+    home: "Aller à la maison"
   },
   pt: {
     info: "informação",
@@ -197,6 +207,8 @@ export const titulosComunes = {
     buscar: "Procurar",
     resultados: "Resultados para: ",
     footer: "Realizado por",
+    error:"Ops! caminho não encontrado",
+    home: "Ir para casa"
   },
 };
 export const urlBase = "https://api.themoviedb.org/3";

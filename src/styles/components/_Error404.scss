@@ -1,0 +1,27 @@
+@import "../utilidades/Variables";
+
+.seccion-error {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  .emoji {
+    color: $blanco;
+    font-size: 5rem;
+  }
+  p {
+    font-size: 4rem;
+    color: $blanco;
+  }
+  a {
+    display: flex;
+    align-items: center;
+    .home,
+    p {
+      font-size: 1.5rem;
+      color: $detalles;
+      margin-right: 10px;
+    }
+  }
+}
