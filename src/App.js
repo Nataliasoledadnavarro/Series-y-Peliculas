@@ -10,15 +10,15 @@ import PersonaInfo from "./components/PersonaInfo";
 import PersonaCreditos from "./components/PersonaCreditos";
 import VideoPelicula from "./components/VideoPelicula";
 import Similares from "./components/Similares";
-import SeriesPorCategorias from "./components/SeriesCategorias";
+import SeriesCategorias from "./components/SeriesCategorias";
 import EpisodiosSerie from "./components/EpisodiosSerie";
 import ResultadosBusqueda from "./components/ResultadosBusqueda";
 import Error404 from "./components/Error404";
 import NavInferior from "./components/NavInferior";
 import Footer from "./components/Footer"
 import Context from "./contexto/Context"
-import SeriesCategorias from "./components/SeriesCategorias";
 import Generos from "./components/Generos";
+import ResultadosCategorias from "./components/ResultadosCategorias";
 
 
 
@@ -43,7 +43,7 @@ const App = () => {
 
         <Route path="/movie" element={<PeliculasCategorias />} />{/*muestra peliculas: populares/mejores criticas/ a estrenarse/ en cine.*/}
         <Route path="/:tipo/:id/info" element={<InfoGeneral />} /> {/*Detalle info de la pelicula/serie elegida*/}
-        <Route path="/tv" element={<SeriesPorCategorias />}/> {/*muestra series: populares/mejores criticas/ al aire*/}
+        <Route path="/tv" element={<SeriesCategorias />}/> {/*muestra series: populares/mejores criticas/ al aire*/}
         <Route path="/:tipo/:id/info" element={<InfoGeneral />} /> {/*Detalle info de la pelicula/serie elegida*/}
         <Route path="/busqueda/:nombreBusqueda/page/:paginaBusqueda" element={<ResultadosBusqueda />}/> {/*Redirecciona a los resultados de la busqueda. */}
         <Route path="/:tipo/:id/reparto" element={<Reparto />} /> {/*Reparto de la serie/pelicula*/}
@@ -52,15 +52,9 @@ const App = () => {
         <Route path="/:tipo/:genero/:id/page/1" element={<Generos />} /> {/*Reparto de la serie/pelicula*/}
         <Route path="/person/:id/info" element={<PersonaInfo />} /> {/*Detalle del actor/actriz seleccionado*/}
         <Route path="/person/:id/creditos"element={<PersonaCreditos />}/> {/*Creditos del actor/actriz seleccionado*/}
-        <Route path="/peliculas/:filtroPeliculas/page/:paginaPeliculas"element={<PeliculasCategorias />}/>{/*muestra todas las peliculas disponible segun el parametro elegido.*/}
+        <Route path="/:tipo/:categoria/page/1"element={<ResultadosCategorias />}/>{/*muestra todas las peliculas disponible segun el parametro elegido.*/}
         <Route path="/:tipo/:id/videos" element={<VideoPelicula />}/> {/*Videos de la pelicula elegida*/}
-        
-        
 
-        
-        <Route path="/series/:filtroSeries/page/:paginaSeries" element={<SeriesCategorias />}/> {/*muestra todas las series disponibles segun el parametro elegido.*/}
-        
-        <Route path="/series/:idSerie/similares" element={<Similares />} />{/*Reparto de la serie/pelicula*/}
 
         <Route path="*" element={<Error404 />} />
       </Routes>

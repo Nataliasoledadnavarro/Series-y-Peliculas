@@ -7,6 +7,7 @@ import {
   urlBase,
   apiKey,
 } from "../auxiliares/Variables";
+import "../styles/components/_Home.scss"
 
 const Home = () => {
   const lenguajeSeleccionado = useContext(Context).lenguaje;
@@ -16,12 +17,14 @@ const Home = () => {
       <Carousel
         url={`${urlBase}/trending/movie/week?api_key=${apiKey}&language=${lenguajeSeleccionado}`}
         tipo="movie"
+        categoria="trending"
         titulo={titulosPeliculas[lenguajeSeleccionado].tendencia}
       />
 
       <Carousel
         url={`${urlBase}/trending/tv/week?api_key=${apiKey}&language=${lenguajeSeleccionado}`}
         tipo="tv"
+        categoria="trending"
         titulo={titulosSeries[lenguajeSeleccionado].tendencia}
       />
     </section>
