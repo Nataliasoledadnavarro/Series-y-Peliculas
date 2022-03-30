@@ -7,7 +7,7 @@ import {
   urlBase,
   apiKey,
 } from "../auxiliares/Variables";
-import "../styles/components/_Home.scss"
+import "../styles/components/_Home.scss";
 
 const Home = () => {
   const lenguajeSeleccionado = useContext(Context).lenguaje;
