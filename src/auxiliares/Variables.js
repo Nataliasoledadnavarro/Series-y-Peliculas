@@ -48,7 +48,7 @@ export const titulosPeliculas = {
   },
   in: {
     tendencia: "Movies that are trending",
-    populares: "popular movies",
+    populares: "Popular movies",
     criticas: "Top rated movies",
     aire: "Movies on the air",
     proximamente: "New movies",
