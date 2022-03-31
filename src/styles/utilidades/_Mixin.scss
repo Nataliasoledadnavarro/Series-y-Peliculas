@@ -4,14 +4,3 @@
   margin-left: 30px;
   color: $blanco;
 }
-
-@mixin titulo-link{
-  a {
-    font-size: 1.2rem;
-    margin: 20px;
-    color: $blanco;
-  }
-  a:hover {
-    text-decoration: overline $background-claro;
-  }
-}

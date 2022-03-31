@@ -3,7 +3,6 @@ import {
   AiOutlineStar as EstrellaVacia,
   AiFillStar as EstrellaCompleta,
 } from "react-icons/ai";
-
 import { Link } from "react-router-dom";
 
 // CAPITALIZAR
@@ -34,6 +33,8 @@ export const mostrarImagen = (resultado, tamaño) => {
     return `https://image.tmdb.org/t/p/${tamaño}${resultado.profile_path}`;
   } else if (resultado.poster_path) {
     return `https://image.tmdb.org/t/p/${tamaño}${resultado.poster_path}`;
+  } else if (resultado.poster_path) {
+    return `https://image.tmdb.org/t/p/${tamaño}${resultado.still_path}`;
   } else {
     return img;
   }
@@ -79,4 +80,19 @@ export const generos = (array, tipo) => {
   ));
 
   return generos;
+};
+
+// CREAR OPCIONES DE TEMPORADAS
+
+export const opciones = (cantidad, palabraTemporada) => {
+  const options = [];
+
+  for (let i = 0; i < cantidad; i++) {
+    options.push(
+      <option className="option-temporada" value={i + 1} key={i}>
+        {palabraTemporada} {i + 1}
+      </option>
+    );
+  }
+  return options;
 };

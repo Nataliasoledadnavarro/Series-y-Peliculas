@@ -1,0 +1,35 @@
+@import "../utilidades/Variables";
+
+.tarjeta-episodio {
+  width: 490px;
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  margin: 10px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  .contenedor-img {
+    height: 50%;
+    overflow: hidden;
+    img {
+      width: 100%;
+    }
+  }
+  .titulo-episodio,
+  .descripcion-episodio {
+    margin-top: 15px;
+    margin-bottom: 0;
+    padding: 8px;
+    font-size: 1rem;
+    color: $detalles;
+  }
+  .descripcion-episodio {
+    color: $blanco;
+    font-size: 0.9rem;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .tarjeta-episodio {
+    width: 310px;
+  }
+}

@@ -6,7 +6,7 @@ import Context from "../contexto/Context";
 import { apiKey, urlBase, titulosComunes } from "../auxiliares/Variables";
 import HeaderDetalle from "./HeaderDetalle";
 import CardVideo from "./CardVideo";
-import "../styles/components/_Card-video.scss";
+import "../styles/components/_Video-pelicula.scss";
 
 const VideoPelicula = () => {
   const params = useParams();
@@ -15,7 +15,6 @@ const VideoPelicula = () => {
     `${urlBase}/movie/${params.id}/videos?api_key=${apiKey}&language=${lenguajeSeleccionado}`
   );
 
-  console.log(resultados);
   return (
     <section className="seccion-videos">
       <HeaderDetalle />

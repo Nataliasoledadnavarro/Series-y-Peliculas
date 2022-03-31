@@ -14,6 +14,7 @@ const InfoGeneral = () => {
   const lenguajeSeleccionado = useContext(Context).lenguaje;
   const info = useFetchId();
 
+
   return (
     <section className="seccion-detalle">
       <HeaderDetalle />
