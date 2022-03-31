@@ -6,8 +6,8 @@ import Context from "../contexto/Context";
 const useFetch = (url) => {
   const lenguajeSeleccionado = useContext(Context).lenguaje;
   const [resultados, setResultados] = useState([]);
-  const [page, setPage] = useState(1);
-  const [totalPages, setTotalPages] = useState(0);
+  const [pagina, setPagina] = useState(1);
+  const [paginasTotales, setPaginasTotales] = useState(1);
   const [cast, setCast] = useState([]);
   const [episodios, setEpisodios] = useState([]);
   const [data, setData] = useState({})
@@ -18,8 +18,8 @@ console.log(url)
       .then((res) => res.json())
       .then((data) => {
         setResultados(data.results);
-        setTotalPages(data.total_pages);
-        setPage(data.page);
+        setPaginasTotales(data.total_pages);
+        setPagina(data.page);
         setCast(data.cast);
         setEpisodios(data.episodes);
         setData(data)
@@ -28,8 +28,8 @@ console.log(url)
 
   return {
     resultados: resultados,
-    page: page,
-    totalPages: totalPages,
+    pagina: pagina,
+    paginasTotales: paginasTotales,
     cast: cast,
     episodios: episodios,
     data:data

@@ -16,12 +16,12 @@ const NavInferior = () => {
             <HomeIcon className="icono-nav" />
           </li>
         </Link>
-        <Link to="/peliculas/:filtroPeliculas/page/:paginaPeliculas">
+        <Link to="/movie">
           <li>
             <CamaraIcon className="icono-nav" />
           </li>
         </Link>
-        <Link to="/series/:filtroSeries/page/:paginaSeries">
+        <Link to="/tv">
           <li>
             <MonitorIcon className="icono-nav" />
           </li>
