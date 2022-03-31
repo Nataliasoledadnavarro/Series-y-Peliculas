@@ -1,0 +1,13 @@
+@import "../utilidades/Variables";
+
+.contenedor-videos {
+    width: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    h3 {
+      color: $blanco;
+      font-size: 1.5rem;
+      margin-top: 80px;
+    }
+}

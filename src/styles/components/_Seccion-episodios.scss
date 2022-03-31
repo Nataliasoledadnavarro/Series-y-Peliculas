@@ -1,0 +1,24 @@
+@import "../utilidades/Variables";
+
+.seccion-episodios {
+  .select-temporadas {
+    border: none;
+    border: solid 1px $detalles;
+    border-radius: 3px;
+    background-color: transparent;
+    color: $blanco;
+    font-size: 1rem;
+    margin-left: 80px;
+    margin-bottom: 50px;
+    padding: 10px;
+    option {
+      color: $detalles;
+    }
+  }
+  .contenedor-episodios {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+  }
+}

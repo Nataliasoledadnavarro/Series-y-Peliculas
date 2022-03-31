@@ -4,8 +4,7 @@ import { Link } from "react-router-dom";
 
 const Card = ({ resultado, tipo}) => {
   const src= mostrarImagen(resultado,"w300")
-   
-
+  
   return (
     <Link to={`/${tipo}/${resultado.id}/info`} key={resultado.id}>
       <article  className="tarjeta">

@@ -17,7 +17,7 @@ const Redes = ({ homePage, tipo }) => {
       .then((data) => setRedes(data));
   }, []);
 
-  console.log(redes);
+ 
   return (
     <div className="contenedor-iconos">
       {redes.facebook_id && (

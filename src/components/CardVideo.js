@@ -2,7 +2,7 @@ import "../styles/components/_Card-video.scss";
 
 const CardVideo = ({ video }) => {
   return (
-    <article>
+    <article className="video">
       <iframe
         aria-label={`${video.name}`}
         title={video.name}
