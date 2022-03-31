@@ -20,7 +20,7 @@ const EpisodiosSerie = () => {
     navigate(`/${params.tipo}/${params.id}/temporada/${e.target.value}`);
   };
 
-  const { resultados, page, totalPages, cast, episodios, data } = useFetch(
+  const {episodios, data } = useFetch(
     `${urlBase}/tv/${params.id}/season/${temporada}?api_key=${apiKey}&language=${lenguajeSeleccionado}`
   );
   const cantidadDeTemporadas = useFetchId().number_of_seasons;

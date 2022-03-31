@@ -9,8 +9,7 @@ import { AiOutlineArrowRight } from "react-icons/ai";
 import { Link, useParams } from "react-router-dom";
 
 const Carousel = ({ url, tipo,categoria, titulo }) => {
-  const params = useParams();
-  const { resultados, page, totalPages, cast } = useFetch(url);
+  const { resultados, pagina, totalPaginas,data, cast } = useFetch(url);
 
   const settings = {
     className: "carousel",
@@ -27,7 +26,7 @@ const Carousel = ({ url, tipo,categoria, titulo }) => {
     <div className="carousel">
       <div className="contenedor-titulo">
         <h2>{titulo}</h2>
-        <Link to={`/${tipo}/${categoria}/page/1`}>
+        <Link to={`/${tipo}/${categoria}/page/${pagina}`}>
           <AiOutlineArrowRight className="icono-flecha" />
         </Link>
       </div>
