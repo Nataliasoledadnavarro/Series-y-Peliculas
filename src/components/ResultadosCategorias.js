@@ -10,17 +10,26 @@ import {
   apiKey,
 } from "../auxiliares/Variables";
 import useFetch from "../Hooks/useFetch";
+import Paginado from "../components/Paginado";
+import usePaginado from "../Hooks/UsePaginado";
 
 const ResultadosCategorias = () => {
   const params = useParams();
   const lenguajeSeleccionado = useContext(Context).lenguaje;
+  const {
+    handleClickPrimeraPagina,
+    handleClickUltimaPagina,
+    handleClickPaginaAnterior,
+    handleClickProximaPagina,
+    pagina,
+  } = usePaginado();
 
   //Función que retorna url correspondiente a la categoría seleccionada. Si es trending el orden del endpoint está invertido.
   const url = () => {
     if (params.categoria === "trending") {
-      return `${urlBase}/trending/${params.tipo}/week?api_key=${apiKey}&language=${lenguajeSeleccionado}`;
+      return `${urlBase}/trending/${params.tipo}/week?api_key=${apiKey}&language=${lenguajeSeleccionado}&page=${params.pagina}`;
     } else {
-      return `${urlBase}/${params.tipo}/${params.categoria}?api_key=${apiKey}&language=${lenguajeSeleccionado}`;
+      return `${urlBase}/${params.tipo}/${params.categoria}?api_key=${apiKey}&language=${lenguajeSeleccionado}&page=${params.pagina}`;
     }
   };
 
@@ -50,7 +59,7 @@ const ResultadosCategorias = () => {
     }
   };
 
-  const { resultados, page, totalPages, cast } = useFetch(url());
+  const { resultados,paginasTotales} = useFetch(url());
 
   return (
     <div className="contenedor-seccion">
@@ -61,6 +70,16 @@ const ResultadosCategorias = () => {
             <Card resultado={resultado} tipo={params.tipo} />
           ))}
         </div>
+        {
+          <Paginado
+            handleClickPrimeraPagina={handleClickPrimeraPagina}
+            handleClickUltimaPagina={handleClickUltimaPagina}
+            handleClickPaginaAnterior={handleClickPaginaAnterior}
+            handleClickProximaPagina={handleClickProximaPagina}
+            pagina={params.pagina}
+            paginasTotales={paginasTotales}
+          />
+        }
       </section>
     </div>
   );

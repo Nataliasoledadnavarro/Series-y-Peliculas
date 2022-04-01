@@ -10,22 +10,40 @@ const usePaginado = () => {
 
   const handleClickPrimeraPagina = () => {
     setPagina(1);
-    navigate(`/busqueda/${params.nombreBusqueda}/page/1`);
+    {
+      params.nombreBusqueda !== undefined
+        ? navigate(`/busqueda/${params.nombreBusqueda}/page/1`)
+        : navigate(`/${params.tipo}/${params.categoria}/page/1`);
+    }
   };
   const handleClickUltimaPagina = (paginasTotales) => {
     setPaginasTotales(paginasTotales);
     setPagina(paginasTotales);
-    navigate(`/busqueda/${params.nombreBusqueda}/page/${paginasTotales}`);
+    {
+      params.nombreBusqueda !== undefined
+        ? navigate(`/busqueda/${params.nombreBusqueda}/page/${paginasTotales}`)
+        : navigate(
+            `/${params.tipo}/${params.categoria}/page/${paginasTotales}`
+          );
+    }
   };
 
   const handleClickPaginaAnterior = () => {
     setPagina(pagina - 1);
-    navigate(`/busqueda/${params.nombreBusqueda}/page/${pagina - 1}`);
+    {
+      params.nombreBusqueda !== undefined
+        ? navigate(`/busqueda/${params.nombreBusqueda}/page/${pagina - 1}`)
+        : navigate(`/${params.tipo}/${params.categoria}/page/${pagina - 1}`);
+    }
   };
 
   const handleClickProximaPagina = () => {
     setPagina(pagina + 1);
-    navigate(`/busqueda/${params.nombreBusqueda}/page/${pagina + 1}`);
+    {
+      params.nombreBusqueda !== undefined
+        ? navigate(`/busqueda/${params.nombreBusqueda}/page/${pagina + 1}`)
+        : navigate(`/${params.tipo}/${params.categoria}/page/${pagina + 1}`);
+    }
   };
 
   return {
