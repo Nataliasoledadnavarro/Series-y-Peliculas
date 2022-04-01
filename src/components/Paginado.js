@@ -4,7 +4,10 @@ import {
   FaAngleRight,
   FaAngleDoubleRight,
 } from "react-icons/fa";
-import "../styles/components/_Paginado.scss"
+import "../styles/components/_Paginado.scss";
+import Context from "../contexto/Context";
+import { useContext } from "react";
+import { titulosComunes } from "../auxiliares/Variables";
 
 const Paginado = ({
   handleClickPrimeraPagina,
@@ -14,7 +17,7 @@ const Paginado = ({
   pagina,
   paginasTotales,
 }) => {
-
+  const lenguajeSeleccionado = useContext(Context).lenguaje;
   return (
     <div className="contenedor-paginado">
       <button
@@ -32,7 +35,9 @@ const Paginado = ({
       >
         <FaAngleLeft />
       </button>
-      <p className="pagina-actual"> Página {pagina}</p>
+      <p className="pagina-actual">
+        {titulosComunes[lenguajeSeleccionado].pagina} {pagina}
+      </p>
       <button
         onClick={handleClickProximaPagina}
         disabled={
