@@ -4,6 +4,7 @@ import {
   FaAngleRight,
   FaAngleDoubleRight,
 } from "react-icons/fa";
+import "../styles/components/_Paginado.scss"
 
 const Paginado = ({
   handleClickPrimeraPagina,
@@ -16,39 +17,39 @@ const Paginado = ({
   return (
     <div className="contenedor-paginado">
       <button
-        onclick={handleClickPrimeraPagina}
+        onClick={handleClickPrimeraPagina}
         disabled={pagina === 1}
-        ariaLabel="Primera página"
+        aria-label="Primera página"
       >
         <FaAngleDoubleLeft />
       </button>
 
       <button
-        onclick={handleClickPaginaAnterior}
+        onClick={handleClickPaginaAnterior}
         disabled={pagina === 1}
-        ariaLabel="Página Anterior"
+        aria-label="Página Anterior"
       >
         <FaAngleLeft />
       </button>
       <p className="pagina-actual"> Página {pagina}</p>
       <button
-        onclick={handleClickProximaPagina(
-          paginasTotales > 500 ? 500 : paginasTotales
-        )}
+        onClick={handleClickProximaPagina}
         disabled={
           paginasTotales > 500 ? pagina === 500 : pagina == paginasTotales
         }
-        ariaLabel="Próxima página"
+        aria-label="Próxima página"
       >
         <FaAngleRight />
       </button>
 
       <button
-        onclick={handleClickUltimaPagina}
-        disabled={
-          paginasTotales > 500 ? pagina === 500 : pagina == paginasTotales
+        onClick={() =>
+          handleClickUltimaPagina(paginasTotales > 500 ? 500 : paginasTotales)
         }
-        ariaLabel="Última página"
+        disabled={
+          paginasTotales > 500 ? pagina === 500 : pagina === paginasTotales
+        }
+        aria-label="Última página"
       >
         <FaAngleDoubleRight />
       </button>

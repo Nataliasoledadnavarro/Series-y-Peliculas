@@ -4,19 +4,16 @@ import { BsSearch as LupaIcon } from "react-icons/bs";
 import "../styles/components/_Formulario.scss";
 import { useContext } from "react";
 import Context from "../contexto/Context";
-import {
-  titulosComunes
-} from "../auxiliares/Variables";
+import { titulosComunes } from "../auxiliares/Variables";
 
 const Busqueda = () => {
   const navigate = useNavigate();
   const [valorDelInput, setValorDelInput] = useState("");
-  const [pagina, setPagina] = useState(1);
   const lenguajeSeleccionado = useContext(Context).lenguaje;
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    navigate(`/busqueda/${valorDelInput}/page/${pagina}`);
+    navigate(`/busqueda/${valorDelInput}/page/1`);
   };
 
   const handleChange = (e) => {

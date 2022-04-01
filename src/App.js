@@ -20,13 +20,7 @@ import Context from "./contexto/Context"
 import Generos from "./components/Generos";
 import ResultadosCategorias from "./components/ResultadosCategorias";
 
-
-
-
-{/*252843cc327f9e10875f92a24a03d130*/}
-{/* Una pelicula (https://api.themoviedb.org/3/movie/550?api_key=252843cc327f9e10875f92a24a03d130)*/}
 const App = () => {
-
   const [lenguaje, setLenguaje] = useState("es")
 
   const contexto = {
@@ -45,14 +39,14 @@ const App = () => {
         <Route path="/:tipo/:id/info" element={<InfoGeneral />} /> {/*Detalle info de la pelicula/serie elegida*/}
         <Route path="/tv" element={<SeriesCategorias />}/> {/*muestra series: populares/mejores criticas/ al aire*/}
         <Route path="/:tipo/:id/info" element={<InfoGeneral />} /> {/*Detalle info de la pelicula/serie elegida*/}
-        <Route path="/busqueda/:nombreBusqueda/page/:paginaBusqueda" element={<ResultadosBusqueda />}/> {/*Redirecciona a los resultados de la busqueda. */}
+        <Route path="/busqueda/:nombreBusqueda/page/:pagina" element={<ResultadosBusqueda />}/> {/*Redirecciona a los resultados de la busqueda. */}
         <Route path="/:tipo/:id/reparto" element={<Reparto />} /> {/*Reparto de la serie/pelicula*/}
         <Route path="/:tipo/:id/similares" element={<Similares />} /> {/*Peliculas/Series similares de la pelicula elegida*/}
         <Route path="/:tipo/:id/temporada/:numeroTemporada" element={<EpisodiosSerie />}/> {/*Episodios de la serie elegida*/}
-        <Route path="/:tipo/:genero/:id/page/1" element={<Generos />} /> {/*Reparto de la serie/pelicula*/}
+        <Route path="/:tipo/:genero/:id/page/:pagina" element={<Generos />} /> {/*Reparto de la serie/pelicula*/}
         <Route path="/person/:id/info" element={<PersonaInfo />} /> {/*Detalle del actor/actriz seleccionado*/}
         <Route path="/person/:id/creditos"element={<PersonaCreditos />}/> {/*Creditos del actor/actriz seleccionado*/}
-        <Route path="/:tipo/:categoria/page/1"element={<ResultadosCategorias />}/>{/*muestra todas las peliculas disponible segun el parametro elegido.*/}
+        <Route path="/:tipo/:categoria/page/:pagina"element={<ResultadosCategorias />}/>{/*muestra todas las peliculas disponible segun el parametro elegido.*/}
         <Route path="/:tipo/:id/videos" element={<VideoPelicula />}/> {/*Videos de la pelicula elegida*/}
 
 
