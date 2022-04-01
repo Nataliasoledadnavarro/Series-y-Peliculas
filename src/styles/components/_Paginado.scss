@@ -1,0 +1,19 @@
+@import "../utilidades/Variables";
+
+.contenedor-paginado {
+  width: 300px;
+  display: flex;
+  justify-content: space-around;
+  margin: auto;
+  p {
+    color: $detalles;
+  }
+  button {
+    border: none;
+    background-color: transparent;
+    svg {
+      color: $blanco;
+      font-size: 24px;
+    }
+  }
+}

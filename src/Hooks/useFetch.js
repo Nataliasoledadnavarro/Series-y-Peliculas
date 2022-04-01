@@ -10,9 +10,10 @@ const useFetch = (url) => {
   const [paginasTotales, setPaginasTotales] = useState(1);
   const [cast, setCast] = useState([]);
   const [episodios, setEpisodios] = useState([]);
-  const [data, setData] = useState({})
+  const [data, setData] = useState({});
   const params = useParams();
-console.log(url)
+
+  
   useEffect(() => {
     fetch(url)
       .then((res) => res.json())
@@ -22,7 +23,7 @@ console.log(url)
         setPagina(data.page);
         setCast(data.cast);
         setEpisodios(data.episodes);
-        setData(data)
+        setData(data);
       });
   }, [lenguajeSeleccionado, params.nombreBusqueda, url]);
 
@@ -32,7 +33,7 @@ console.log(url)
     paginasTotales: paginasTotales,
     cast: cast,
     episodios: episodios,
-    data:data
+    data: data,
   };
 };
 
