@@ -1,7 +1,6 @@
 import "../styles/components/_Header-detalle.scss";
 import useFetchId from "../Hooks/useFetchId";
 import { Link } from "react-router-dom";
-import { mostrarImagen } from "../auxiliares/Funciones";
 import { useParams } from "react-router-dom";
 import { titulosComunes } from "../auxiliares/Variables";
 import { useContext } from "react";
@@ -16,7 +15,7 @@ const HeaderDetalle = () => {
     <section>
       <div className="header-info">
         <img
-          src={mostrarImagen(info, "original")}
+          src={`https://image.tmdb.org/t/p/original${info.backdrop_path}`}
           alt={info.title ? info.title : info.name}
         />
       </div>

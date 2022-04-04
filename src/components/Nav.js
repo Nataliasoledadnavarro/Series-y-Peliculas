@@ -20,17 +20,17 @@ const Nav = () => {
   return (
     <nav className="nav-superior">
       <ul className="contenedor-iconos">
-        <Link to="/" className="link-nav">
+        <Link to="/" className="link-nav" aria-label="Ir a Home">
           <li>
             <HomeIcon className="icono-nav" />
           </li>
         </Link>
-        <Link to="/movie" className="link-nav">
+        <Link to="/movie" className="link-nav" aria-label="Ir a peliculas">
           <li>
             <CamaraIcon className="icono-nav" />
           </li>
         </Link>
-        <Link to="/tv" className="link-nav">
+        <Link to="/tv" className="link-nav" aria-label="Ir a series">
           <li>
             <MonitorIcon className="icono-nav" />
           </li>

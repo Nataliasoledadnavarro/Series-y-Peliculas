@@ -33,9 +33,9 @@ export const mostrarImagen = (resultado, tamaño) => {
     return `https://image.tmdb.org/t/p/${tamaño}${resultado.profile_path}`;
   } else if (resultado.poster_path) {
     return `https://image.tmdb.org/t/p/${tamaño}${resultado.poster_path}`;
-  } else if (resultado.poster_path) {
+  } else if (resultado.still_path) {
     return `https://image.tmdb.org/t/p/${tamaño}${resultado.still_path}`;
-  } else {
+  }  else {
     return img;
   }
 };
