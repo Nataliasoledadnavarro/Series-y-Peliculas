@@ -52,7 +52,7 @@ const App = () => {
 
         <Route path="*" element={<Error404 />} />
       </Routes>
-      {window.innerWidth <= 500 && <NavInferior/>}
+      {window.innerWidth <= 600 && <NavInferior/>}
       <Footer/>
       </Context.Provider>
     </BrowserRouter>

@@ -1,12 +1,10 @@
 import { useContext, useEffect, useState } from "react";
 import { useParams, Link } from "react-router-dom";
 import { mostrarImagen } from "../auxiliares/Funciones";
-import "../styles/components/_Info-general.scss";
-import "../styles/components/_Header-detalle.scss";
 import Context from "../contexto/Context";
 import Redes from "../components/Redes";
 import { urlBase, apiKey, titulosComunes } from "../auxiliares/Variables";
-
+import "../styles/components/_PersonaInfo.scss"
 const PersonaInfo = () => {
   const params = useParams();
   const lenguajeSeleccionado = useContext(Context).lenguaje;
@@ -21,7 +19,7 @@ const PersonaInfo = () => {
   }, [lenguajeSeleccionado, resultado]);
 
   return (
-    <section>
+    <section className="info-persona" >
       <div className="contenedor-links">
         <Link to={`/person/${params.id}/info`}>
           <h3>{titulosComunes[lenguajeSeleccionado].informacion}</h3>

@@ -9,7 +9,7 @@ import { FiMonitor as MonitorIcon } from "react-icons/fi";
 
 const NavInferior = () => {
   return (
-    <nav>
+    <nav className="nav-inferior">
       <ul>
         <Link to="/">
           <li>

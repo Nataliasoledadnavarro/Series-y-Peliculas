@@ -32,11 +32,20 @@ const ResultadosBusqueda = () => {
           {capitalizar(params.nombreBusqueda)}
         </h2>
         <div className="contenedor-resultados">
+          {resultados.length === 0 && (
+            <h3 className="no-disponible">
+              {titulosComunes[lenguajeSeleccionado].noDisponible}
+            </h3>
+          )}
           {resultados.map((resultado) => (
-            <Card resultado={resultado} tipo={resultado.media_type} />
+            <Card
+              resultado={resultado}
+              tipo={resultado.media_type}
+              key={resultado.id}
+            />
           ))}
         </div>
-        {
+        {paginasTotales > 0 && (
           <Paginado
             handleClickPrimeraPagina={handleClickPrimeraPagina}
             handleClickUltimaPagina={handleClickUltimaPagina}
@@ -45,7 +54,7 @@ const ResultadosBusqueda = () => {
             pagina={params.pagina}
             paginasTotales={paginasTotales}
           />
-        }
+        )}
       </section>
     </div>
   );

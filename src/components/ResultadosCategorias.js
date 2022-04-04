@@ -70,7 +70,7 @@ const ResultadosCategorias = () => {
             <Card resultado={resultado} tipo={params.tipo} />
           ))}
         </div>
-        {
+        {paginasTotales > 0 &&
           <Paginado
             handleClickPrimeraPagina={handleClickPrimeraPagina}
             handleClickUltimaPagina={handleClickUltimaPagina}

@@ -19,6 +19,12 @@
       flex-wrap: wrap;
       align-items: center;
       justify-content: center;
+      .no-disponible{
+        margin-top: 100px;
+        margin-bottom: 150px;
+        color: $blanco;
+        font-size: 2rem;
+      }
     }
   }
 }

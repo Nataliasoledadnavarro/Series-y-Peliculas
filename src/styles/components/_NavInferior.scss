@@ -1,15 +1,15 @@
 @import "../utilidades/Variables";
 
-nav {
+.nav-inferior {
   width: 100%;
   background-color: $negro;
   height: 60px;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   ul {
     height: 60px;
-    width: 100%;
+    width: 70%;
     display: flex;
     align-items: center;
     justify-content: space-around;

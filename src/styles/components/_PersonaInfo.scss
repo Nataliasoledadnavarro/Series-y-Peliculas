@@ -1,0 +1,39 @@
+@media screen and (max-width: 900px) {
+  .info-persona {
+    .contenedor-info {
+      flex-direction: column;
+      .poster {
+        width: 40%;
+        margin-left: 0%;
+      }
+      .contenedor-descripcion {
+        width: 90%;
+        .descripcion {
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .info-persona {
+    .contenedor-info {
+      .poster {
+        width: 60%;
+      }
+    }
+  }
+}
+
+
+@media screen and (max-width: 400px) {
+    .info-persona {
+      .contenedor-info {
+        .poster {
+          width: 70%;
+        }
+      }
+    }
+  }
+  

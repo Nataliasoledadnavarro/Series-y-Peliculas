@@ -13,7 +13,9 @@ const Busqueda = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    navigate(`/busqueda/${valorDelInput}/page/1`);
+    {
+      valorDelInput !== "" && navigate(`/busqueda/${valorDelInput}/page/1`);
+    }
   };
 
   const handleChange = (e) => {
