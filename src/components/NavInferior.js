@@ -11,17 +11,17 @@ const NavInferior = () => {
   return (
     <nav className="nav-inferior">
       <ul>
-        <Link to="/">
+        <Link to="/" aria-label="Ir a Home">
           <li>
             <HomeIcon className="icono-nav" />
           </li>
         </Link>
-        <Link to="/movie">
+        <Link to="/movie" aria-label="Ir a películas" >
           <li>
             <CamaraIcon className="icono-nav" />
           </li>
         </Link>
-        <Link to="/tv">
+        <Link to="/tv" aria-label="Ir a series">
           <li>
             <MonitorIcon className="icono-nav" />
           </li>

@@ -9,7 +9,7 @@ const Footer = () => {
   return (
     <footer className="footer">
       <p>{titulosComunes[lenguajeSeleccionado].footer}</p>
-      <a href="https://www.linkedin.com/in/nataliasoledadnavarro/">
+      <a href="https://www.linkedin.com/in/nataliasoledadnavarro/" aria-label="Ir a mi linkedin">
         Naty Navarro
       </a>
     </footer>

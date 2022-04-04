@@ -18,27 +18,39 @@ const Redes = ({ homePage, tipo }) => {
   return (
     <div className="contenedor-iconos">
       {redes.facebook_id && (
-        <a href={` https://www.facebook.com/${redes.facebook_id}`}>
+        <a
+          href={` https://www.facebook.com/${redes.facebook_id}`}
+          aria-label="Ir a Facebook"
+        >
           <SiFacebook />
         </a>
       )}
       {redes.instagram_id && (
-        <a href={`https://www.instagram.com/${redes.instagram_id}`}>
+        <a
+          href={`https://www.instagram.com/${redes.instagram_id}`}
+          aria-label="Ir a Instagram"
+        >
           <SiInstagram />
         </a>
       )}
       {redes.twitter_id && (
-        <a href={`https://www.twitter.com/${redes.twitter_id}`}>
+        <a
+          href={`https://www.twitter.com/${redes.twitter_id}`}
+          aria-label="Ir a Twitter"
+        >
           <SiTwitter />
         </a>
       )}
       {redes.imdb_id && (
-        <a href={`https://www.imdb.com/title/${redes.imdb_id}`}>
+        <a
+          href={`https://www.imdb.com/title/${redes.imdb_id}`}
+          aria-label="Ir a Imdb"
+        >
           <SiImdb />
         </a>
       )}
       {homePage !== null && (
-        <a href={homePage}>
+        <a href={homePage} aria-label="Ir a Home page">
           <BsLink />
         </a>
       )}

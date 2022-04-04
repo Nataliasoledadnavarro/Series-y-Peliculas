@@ -13,8 +13,7 @@ const InfoGeneral = () => {
   const params = useParams();
   const lenguajeSeleccionado = useContext(Context).lenguaje;
   const info = useFetchId();
-  console.log(info.vote_average)
-
+  console.log(info.vote_average);
 
   return (
     <section className="seccion-detalle">
@@ -28,7 +27,10 @@ const InfoGeneral = () => {
         </div>
         <div className="contenedor-descripcion">
           <h3>{info.title ? info.title : info.name}</h3>
-          <div className="contenedor-estrellas">
+          <div
+            className="contenedor-estrellas"
+            aria-label={`Puntuación ${info.vote_average}/10`}
+          >
             {estrellas(Math.round(info.vote_average))}
           </div>
           <p className="descripcion">{info.overview}</p>

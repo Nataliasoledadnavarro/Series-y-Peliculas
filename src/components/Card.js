@@ -6,7 +6,7 @@ const Card = ({ resultado, tipo}) => {
   const src= mostrarImagen(resultado,"w300")
   
   return (
-    <Link to={`/${tipo}/${resultado.id}/info`} key={resultado.id}>
+    <Link to={`/${tipo}/${resultado.id}/info`} key={resultado.id} aria-label="Más info">
       <article  className="tarjeta">
         <div className="contenedor-img">
           <img

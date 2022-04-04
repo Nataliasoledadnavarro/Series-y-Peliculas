@@ -6,7 +6,7 @@ import Card from "./Card";
 import { cantidadTarjetas } from "../auxiliares/Funciones";
 import useFetch from "../Hooks/useFetch";
 import { AiOutlineArrowRight } from "react-icons/ai";
-import { Link, useParams } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const Carousel = ({ url, tipo,categoria, titulo }) => {
   const { resultados, pagina, totalPaginas,data, cast } = useFetch(url);
@@ -26,7 +26,7 @@ const Carousel = ({ url, tipo,categoria, titulo }) => {
     <div className="carousel">
       <div className="contenedor-titulo">
         <h2>{titulo}</h2>
-        <Link to={`/${tipo}/${categoria}/page/${pagina}`}>
+        <Link to={`/${tipo}/${categoria}/page/${pagina}`} aria-label={titulo}>
           <AiOutlineArrowRight className="icono-flecha" />
         </Link>
       </div>

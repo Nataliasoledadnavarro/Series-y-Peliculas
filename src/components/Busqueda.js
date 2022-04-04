@@ -24,7 +24,7 @@ const Busqueda = () => {
 
   return (
     <form onSubmit={handleSubmit}>
-      <button className="boton-buscar" aria-label="Boton buscar">
+      <button className="boton-buscar" aria-label="Buscar">
         <LupaIcon className="icono-nav" />
       </button>
       <input
