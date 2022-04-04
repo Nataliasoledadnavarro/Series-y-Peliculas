@@ -13,7 +13,6 @@ const useFetch = (url) => {
   const [data, setData] = useState({});
   const params = useParams();
 
-  
   useEffect(() => {
     fetch(url)
       .then((res) => res.json())

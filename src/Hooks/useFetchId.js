@@ -15,7 +15,7 @@ const useFetchId = () => {
     fetch(  `${urlBase}/${params.tipo}/${params.id}?api_key=${apiKey}&language=${lenguajeSeleccionado}`)
       .then((res) => res.json())
       .then((data) => setResultado(data))
-  }, [lenguajeSeleccionado])
+  }, [lenguajeSeleccionado, params.id, params.tipo])
 
   return resultado
 };

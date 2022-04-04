@@ -17,7 +17,6 @@ const ResultadosBusqueda = () => {
     handleClickUltimaPagina,
     handleClickPaginaAnterior,
     handleClickProximaPagina,
-    pagina,
   } = usePaginado();
 
   const { resultados, paginasTotales } = useFetch(

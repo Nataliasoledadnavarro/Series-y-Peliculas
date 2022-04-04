@@ -13,7 +13,7 @@ const Redes = ({ homePage, tipo }) => {
     fetch(`${urlBase}/${tipo}/${params.id}/external_ids?api_key=${apiKey}`)
       .then((res) => res.json())
       .then((data) => setRedes(data));
-  }, []);
+  }, [params.id, tipo]);
 
   return (
     <div className="contenedor-iconos">

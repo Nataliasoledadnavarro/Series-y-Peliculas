@@ -9,8 +9,7 @@ import useFetch from "../Hooks/useFetch";
 const Generos = () => {
   const params = useParams();
   const lenguajeSeleccionado = useContext(Context).lenguaje;
-  //let [paginaActual, setPaginaActual] = useState(1);
-  const { resultados, page, totalPages, cast } = useFetch(
+  const { resultados } = useFetch(
     `${urlBase}/discover/${params.tipo}?api_key=${apiKey}&language=${lenguajeSeleccionado}&with_genres=${params.id}&page=1`
   );
 
