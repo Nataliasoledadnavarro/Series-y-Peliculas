@@ -22,5 +22,16 @@ form {
 @media screen and (max-width: 600px) {
   form {
     width: 100%;
+    button {
+      .icono-nav {
+        width: 20px;
+      }
+    }
+    input {
+      font-size: 18px;
+    }
+    input::placeholder {
+      font-size: 18px;
+    }
   }
 }

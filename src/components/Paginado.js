@@ -30,7 +30,7 @@ const Paginado = ({
 
       <button
         onClick={handleClickPaginaAnterior}
-        disabled={pagina == 1}
+        disabled={pagina === 1}
         aria-label="Página Anterior"
       >
         <FaAngleLeft />
@@ -41,7 +41,7 @@ const Paginado = ({
       <button
         onClick={handleClickProximaPagina}
         disabled={
-          paginasTotales > 500 ? pagina == 500 : pagina == paginasTotales
+          Number(paginasTotales) > 500 ? Number(pagina) === 500 : Number(pagina) === Number(paginasTotales)
         }
         aria-label="Próxima página"
       >
@@ -53,7 +53,7 @@ const Paginado = ({
           handleClickUltimaPagina(paginasTotales > 500 ? 500 : paginasTotales)
         }
         disabled={
-          paginasTotales > 500 ? pagina == 500 : pagina == paginasTotales
+          Number(paginasTotales) > 500 ? Number(pagina) === 500 : Number(pagina) === Number(paginasTotales)
         }
         aria-label="Última página"
       >

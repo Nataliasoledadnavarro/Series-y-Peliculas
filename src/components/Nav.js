@@ -9,6 +9,7 @@ import { FiMonitor as MonitorIcon } from "react-icons/fi";
 import Busqueda from "./Busqueda";
 import { useContext } from "react";
 import Context from "../contexto/Context";
+import logo from "../img/logo.png";
 
 const Nav = () => {
   const contexto = useContext(Context);
@@ -19,6 +20,7 @@ const Nav = () => {
 
   return (
     <nav className="nav-superior">
+      <img className="logo" src={logo} alt="Logo de letra N"/>
       <ul className="contenedor-iconos">
         <Link to="/" className="link-nav" aria-label="Ir a Home">
           <li>

@@ -16,7 +16,7 @@ const PersonaInfo = () => {
     )
       .then((res) => res.json())
       .then((data) => setResultado(data));
-  }, [lenguajeSeleccionado, resultado]);
+  }, [lenguajeSeleccionado, resultado, params.id]);
 
   return (
     <section className="info-persona" >
