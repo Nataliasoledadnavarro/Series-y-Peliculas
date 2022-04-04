@@ -10,41 +10,35 @@ const usePaginado = () => {
 
   const handleClickPrimeraPagina = () => {
     setPagina(1);
-    {
-      params.nombreBusqueda !== undefined
-        ? navigate(`/busqueda/${params.nombreBusqueda}/page/1`)
-        : navigate(`/${params.tipo}/${params.categoria}/page/1`);
-    }
+    params.nombreBusqueda && navigate(`/busqueda/${params.nombreBusqueda}/page/1`);
+    params.nombreBusqueda === undefined &&navigate(`/${params.tipo}/${params.categoria}/page/1`);
+    params.genero &&navigate(`/${params.tipo}/${params.genero}/${params.id}/page/1`);
   };
+
+
   const handleClickUltimaPagina = (paginasTotales) => {
     setPaginasTotales(paginasTotales);
     setPagina(paginasTotales);
-    {
-      params.nombreBusqueda !== undefined
-        ? navigate(`/busqueda/${params.nombreBusqueda}/page/${paginasTotales}`)
-        : navigate(
-            `/${params.tipo}/${params.categoria}/page/${paginasTotales}`
-          );
+
+    params.nombreBusqueda && navigate(`/busqueda/${params.nombreBusqueda}/page/${paginasTotales}`);
+    params.nombreBusqueda === undefined && navigate(`/${params.tipo}/${params.categoria}/page/${paginasTotales}`);
+    params.genero && navigate(`/${params.tipo}/${params.genero}/${params.id}/page/${paginasTotales}`)
     }
-  };
+  
 
   const handleClickPaginaAnterior = () => {
     setPagina(pagina - 1);
-    {
-      params.nombreBusqueda !== undefined
-        ? navigate(`/busqueda/${params.nombreBusqueda}/page/${pagina - 1}`)
-        : navigate(`/${params.tipo}/${params.categoria}/page/${pagina - 1}`);
-    }
+    params.nombreBusqueda && navigate(`/busqueda/${params.nombreBusqueda}/page/${pagina - 1}`);
+    params.nombreBusqueda === undefined && navigate(`/${params.tipo}/${params.categoria}/page/${pagina - 1}`);
+    params.genero && navigate(`/${params.tipo}/${params.genero}/${params.id}/page/${pagina - 1}`);
   };
 
   const handleClickProximaPagina = () => {
     setPagina(pagina + 1);
-    {
-      params.nombreBusqueda !== undefined
-        ? navigate(`/busqueda/${params.nombreBusqueda}/page/${pagina + 1}`)
-        : navigate(`/${params.tipo}/${params.categoria}/page/${pagina + 1}`);
-    }
-  };
+    params.nombreBusqueda && navigate(`/busqueda/${params.nombreBusqueda}/page/${pagina + 1}`);
+    params.nombreBusqueda === undefined && navigate(`/${params.tipo}/${params.categoria}/page/${pagina + 1}`)
+    params.genero && navigate(`/${params.tipo}/${params.genero}/${params.id}/page/${pagina + 1}`)
+  }
 
   return {
     pagina: pagina,

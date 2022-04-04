@@ -5,12 +5,21 @@ import "../styles/components/_Resultados.scss";
 import Context from "../contexto/Context";
 import { titulosComunes, urlBase, apiKey } from "../auxiliares/Variables";
 import useFetch from "../Hooks/useFetch";
+import Paginado from "../components/Paginado";
+import usePaginado from "../Hooks/UsePaginado";
 
 const Generos = () => {
   const params = useParams();
   const lenguajeSeleccionado = useContext(Context).lenguaje;
-  const { resultados } = useFetch(
-    `${urlBase}/discover/${params.tipo}?api_key=${apiKey}&language=${lenguajeSeleccionado}&with_genres=${params.id}&page=1`
+  const {
+    handleClickPrimeraPagina,
+    handleClickUltimaPagina,
+    handleClickPaginaAnterior,
+    handleClickProximaPagina,
+  } = usePaginado();
+
+  const { resultados, paginasTotales } = useFetch(
+    `${urlBase}/discover/${params.tipo}?api_key=${apiKey}&language=${lenguajeSeleccionado}&with_genres=${params.id}&page=${params.pagina}`
   );
 
   return (
@@ -25,6 +34,16 @@ const Generos = () => {
             <Card resultado={resultado} tipo={params.tipo} key={resultado.id} />
           ))}
         </div>
+        {paginasTotales > 0 && (
+          <Paginado
+            handleClickPrimeraPagina={handleClickPrimeraPagina}
+            handleClickUltimaPagina={handleClickUltimaPagina}
+            handleClickPaginaAnterior={handleClickPaginaAnterior}
+            handleClickProximaPagina={handleClickProximaPagina}
+            pagina={params.pagina}
+            paginasTotales={paginasTotales}
+          />
+        )}
       </section>
     </div>
   );
