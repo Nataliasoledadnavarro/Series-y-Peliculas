@@ -9,7 +9,7 @@ import { AiOutlineArrowRight } from "react-icons/ai";
 import { Link } from "react-router-dom";
 
 const Carousel = ({ url, tipo,categoria, titulo }) => {
-  const { resultados, pagina, totalPaginas,data, cast } = useFetch(url);
+  const { resultados, pagina} = useFetch(url);
 
   const settings = {
     className: "carousel",

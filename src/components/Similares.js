@@ -12,7 +12,7 @@ const Similares = () => {
   const params = useParams();
   const lenguajeSeleccionado = useContext(Context).lenguaje;
 
-  const { resultados, page, totalPages, cast } = useFetch(
+  const { resultados } = useFetch(
     `${urlBase}/${params.tipo}/${params.id}/similar?api_key=${apiKey}&language=${lenguajeSeleccionado}&page=1`
   );
 

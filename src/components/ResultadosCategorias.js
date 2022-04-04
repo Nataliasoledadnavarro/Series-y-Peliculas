@@ -21,7 +21,6 @@ const ResultadosCategorias = () => {
     handleClickUltimaPagina,
     handleClickPaginaAnterior,
     handleClickProximaPagina,
-    pagina,
   } = usePaginado();
 
   //Función que retorna url correspondiente a la categoría seleccionada. Si es trending el orden del endpoint está invertido.
@@ -59,7 +58,7 @@ const ResultadosCategorias = () => {
     }
   };
 
-  const { resultados,paginasTotales} = useFetch(url());
+  const { resultados, paginasTotales } = useFetch(url());
 
   return (
     <div className="contenedor-seccion">
@@ -70,7 +69,7 @@ const ResultadosCategorias = () => {
             <Card resultado={resultado} tipo={params.tipo} />
           ))}
         </div>
-        {paginasTotales > 0 &&
+        {paginasTotales > 0 && (
           <Paginado
             handleClickPrimeraPagina={handleClickPrimeraPagina}
             handleClickUltimaPagina={handleClickUltimaPagina}
@@ -79,7 +78,7 @@ const ResultadosCategorias = () => {
             pagina={params.pagina}
             paginasTotales={paginasTotales}
           />
-        }
+        )}
       </section>
     </div>
   );

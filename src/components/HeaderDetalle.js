@@ -5,6 +5,7 @@ import { useParams } from "react-router-dom";
 import { titulosComunes } from "../auxiliares/Variables";
 import { useContext } from "react";
 import Context from "../contexto/Context";
+import { mostrarImagen } from "../auxiliares/Funciones";
 
 const HeaderDetalle = () => {
   const params = useParams();
@@ -15,7 +16,11 @@ const HeaderDetalle = () => {
     <section>
       <div className="header-info">
         <img
-          src={`https://image.tmdb.org/t/p/original${info.backdrop_path}`}
+          src={
+            info.backdrop_path
+              ? `https://image.tmdb.org/t/p/original${info.backdrop_path}`
+              : mostrarImagen(info, "original")
+          }
           alt={info.title ? info.title : info.name}
         />
       </div>

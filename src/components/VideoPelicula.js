@@ -11,7 +11,7 @@ import "../styles/components/_Video-pelicula.scss";
 const VideoPelicula = () => {
   const params = useParams();
   const lenguajeSeleccionado = useContext(Context).lenguaje;
-  const { resultados, page, totalPages, cast } = useFetch(
+  const { resultados } = useFetch(
     `${urlBase}/movie/${params.id}/videos?api_key=${apiKey}&language=${lenguajeSeleccionado}`
   );
 

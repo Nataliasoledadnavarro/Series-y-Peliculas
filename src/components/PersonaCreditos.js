@@ -9,7 +9,7 @@ import { urlBase, apiKey, titulosComunes } from "../auxiliares/Variables";
 const PersonaCreditos = () => {
   const params = useParams();
   const lenguajeSeleccionado = useContext(Context).lenguaje;
-  const { resultados, page, totalPages, cast } = useFetch(
+  const { cast } = useFetch(
     `${urlBase}/person/${params.id}/combined_credits?api_key=${apiKey}&language=${lenguajeSeleccionado}`
   );
 
@@ -28,7 +28,11 @@ const PersonaCreditos = () => {
         <section>
           <div className="contenedor-resultados">
             {cast.map((resultado) => (
-              <Card resultado={resultado} tipo={resultado.media_type} key={resultado.id} />
+              <Card
+                resultado={resultado}
+                tipo={resultado.media_type}
+                key={resultado.id}
+              />
             ))}
           </div>
         </section>
