@@ -12,18 +12,28 @@
     display: flex;
     flex-direction: column;
     h2 {
-      @include h2-secciones; 
+      @include h2-secciones;
     }
     .contenedor-resultados {
       display: flex;
       flex-wrap: wrap;
       align-items: center;
       justify-content: center;
-      .no-disponible{
+      .no-disponible {
         margin-top: 100px;
         margin-bottom: 150px;
         color: $blanco;
         font-size: 2rem;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .contenedor-seccion {
+    section {
+      h2 {
+        font-size: 1.8rem;
       }
     }
   }

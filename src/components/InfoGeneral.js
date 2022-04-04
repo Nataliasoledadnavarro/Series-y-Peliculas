@@ -13,6 +13,7 @@ const InfoGeneral = () => {
   const params = useParams();
   const lenguajeSeleccionado = useContext(Context).lenguaje;
   const info = useFetchId();
+  console.log(info.vote_average)
 
 
   return (

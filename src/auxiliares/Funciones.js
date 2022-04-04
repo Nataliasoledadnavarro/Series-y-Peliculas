@@ -58,7 +58,11 @@ export const estrellas = (valoracion) => {
       </div>
     );
   }
-  return estrellas;
+  if (valoracion === 0) {
+    return [];
+  } else {
+    return estrellas;
+  }
 };
 
 // LISTADO DE PRODUCCION

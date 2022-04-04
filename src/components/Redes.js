@@ -10,14 +10,11 @@ const Redes = ({ homePage, tipo }) => {
   const params = useParams();
 
   useEffect(() => {
-    fetch(
-      `${urlBase}/${tipo}/${params.id}/external_ids?api_key=${apiKey}`
-    )
+    fetch(`${urlBase}/${tipo}/${params.id}/external_ids?api_key=${apiKey}`)
       .then((res) => res.json())
       .then((data) => setRedes(data));
   }, []);
 
- 
   return (
     <div className="contenedor-iconos">
       {redes.facebook_id && (
