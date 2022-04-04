@@ -1,6 +1,6 @@
 @import "../utilidades/Variables";
 
-nav {
+.nav-superior {
   width: 100%;
   background-color: $negro;
   height: 60px;
@@ -8,15 +8,13 @@ nav {
   justify-content: space-between;
   align-items: center;
   .contenedor-iconos {
-    width: 60%;
+    width: 70%;
     height: 60px;
     display: flex;
     align-items: center;
+    justify-content: space-around;
     margin: 0;
     padding: 0;
-    .link-nav {
-      list-style: none;
-    }
     .icono-nav {
       color: $blanco;
       font-size: 28px;
@@ -36,7 +34,15 @@ nav {
   }
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 700px) {
+  .nav-superior {
+    .contenedor-iconos {
+      width: 100%;
+    }
+  }
+}
+
+@media screen and (max-width: 600px) {
   nav {
     .contenedor-iconos {
       .link-nav {

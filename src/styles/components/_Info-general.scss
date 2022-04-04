@@ -1,24 +1,72 @@
 @import "../utilidades/Variables";
 @import "../utilidades/Mixin";
 
-
-  .contenedor-info {
-    display: flex;
-    justify-content: space-around;
-    margin-left: 30px;
-    margin-bottom: 50px;
-    .poster {
-      width: 30%;
-      margin: 40px;
-      img {
-        width: 100%;
+.contenedor-info {
+  display: flex;
+  justify-content: space-around;
+  margin-left: 30px;
+  margin-bottom: 50px;
+  .poster {
+    width: 30%;
+    margin: 40px;
+    img {
+      width: 100%;
+    }
+  }
+  .contenedor-descripcion {
+    width: 70%;
+    color: $blanco;
+    letter-spacing: 1px;
+    margin-top: 15px;
+    h3 {
+      font-size: 2rem;
+    }
+    .contenedor-estrellas {
+      width: 240px;
+      display: flex;
+      justify-content: space-around;
+      svg {
+        color: $detalles;
+        font-size: 20px;
       }
     }
-    .contenedor-descripcion {
+    .descripcion {
+      width: 80%;
+      line-height: 25px;
+    }
+    ul {
+      width: 80%;
+      padding: 0;
+      display: flex;
+      flex-wrap: wrap;
+      li {
+        margin-left: 10px;
+      }
+    }
+    .lista-generos {
+      li {
+        color: $detalles;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .seccion-detalle{
+  .contenedor-info {
+    width: 90%;
+    flex-direction: column;
+    margin: auto;
+    .poster {
       width: 70%;
+      margin: 15px;
+    }
+    .contenedor-descripcion {
+      width: 100%;
       color: $blanco;
       letter-spacing: 1px;
       margin-top: 15px;
+      margin-left: 15px;
       h3 {
         font-size: 2rem;
       }
@@ -32,67 +80,12 @@
         }
       }
       .descripcion {
-        width: 80%;
-        line-height: 25px;
+        width: 90%;
       }
       ul {
-        width: 80%;
-        padding: 0;
-        display: flex;
-        flex-wrap: wrap;
-        li {
-          margin-left: 10px;
-        }
-      }
-      .lista-generos {
-        li {
-          color: $detalles;
-        }
+        width: 90%;
       }
     }
-  }
-
-
-@media screen and (max-width: 550px) {
-  .contenedor-info {
-    flex-direction: column;
-    margin-left: 100px;
   }
 }
-
-@media screen and (max-width: 900px) {
-  .seccion-info {
-    .contenedor-links {
-      display: flex;
-      justify-content: center;
-      a {
-        font-size: 0.8rem;
-        margin: 20px;
-      }
-    }
-    .contenedor-info {
-      .contenedor-descripcion {
-        width: 90%;
-        color: $blanco;
-        letter-spacing: 1px;
-        margin-top: 15px;
-        h3 {
-          font-size: 1.5rem;
-        }
-        .contenedor-estrellas {
-          width: 240px;
-          display: flex;
-          justify-content: space-around;
-          svg {
-            color: $detalles;
-            font-size: 16px;
-          }
-        }
-        .descripcion {
-          width: 95%;
-          line-height: 25px;
-        }
-      }
-    }
-  }
 }

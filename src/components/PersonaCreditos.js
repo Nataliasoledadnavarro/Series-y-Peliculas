@@ -1,7 +1,7 @@
 import { useParams, Link } from "react-router-dom";
 import Card from "../components/Card";
 import useFetch from "../Hooks/useFetch";
-import "../styles/components/_Resultados.scss";
+
 import { useContext } from "react";
 import Context from "../contexto/Context";
 import { urlBase, apiKey, titulosComunes } from "../auxiliares/Variables";
@@ -28,7 +28,7 @@ const PersonaCreditos = () => {
         <section>
           <div className="contenedor-resultados">
             {cast.map((resultado) => (
-              <Card resultado={resultado} tipo={resultado.media_type} />
+              <Card resultado={resultado} tipo={resultado.media_type} key={resultado.id} />
             ))}
           </div>
         </section>
