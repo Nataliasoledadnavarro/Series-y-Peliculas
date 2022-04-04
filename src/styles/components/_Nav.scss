@@ -5,8 +5,11 @@
   background-color: $negro;
   height: 60px;
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-around;
+  .logo {
+    width: 50px;
+  }
   .contenedor-iconos {
     width: 70%;
     height: 60px;
@@ -48,6 +51,18 @@
       .link-nav {
         display: none;
       }
+    }
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .nav-superior {
+    .logo {
+      width: 40px;
+      margin-left: 15px;
+    }
+    .contenedor-iconos {
+      justify-content: flex-start;
     }
   }
 }
