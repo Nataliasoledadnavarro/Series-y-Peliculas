@@ -52,40 +52,52 @@
 }
 
 @media screen and (max-width: 900px) {
-  .seccion-detalle{
-  .contenedor-info {
-    width: 90%;
-    flex-direction: column;
-    margin: auto;
-    .poster {
-      width: 70%;
-      margin: 15px;
-    }
-    .contenedor-descripcion {
-      width: 100%;
-      color: $blanco;
-      letter-spacing: 1px;
-      margin-top: 15px;
-      margin-left: 15px;
-      h3 {
-        font-size: 2rem;
+  .seccion-detalle {
+    .contenedor-info {
+      width: 90%;
+      flex-direction: column;
+      margin: auto;
+      .poster {
+        width: 70%;
+        margin: 15px;
       }
-      .contenedor-estrellas {
-        width: 240px;
-        display: flex;
-        justify-content: space-around;
-        svg {
-          color: $detalles;
-          font-size: 20px;
+      .contenedor-descripcion {
+        width: 95%;
+        color: $blanco;
+        letter-spacing: 1px;
+        margin-top: 15px;
+        margin-left: 15px;
+        h3 {
+          font-size: 2rem;
         }
-      }
-      .descripcion {
-        width: 90%;
-      }
-      ul {
-        width: 90%;
+        .contenedor-estrellas {
+          width: 240px;
+          display: flex;
+          justify-content: space-around;
+          svg {
+            color: $detalles;
+            font-size: 20px;
+          }
+        }
+        .descripcion {
+          width: 90%;
+        }
+        ul {
+          width: 90%;
+        }
       }
     }
   }
 }
+
+@media screen and (max-width: 500px) {
+  .seccion-detalle {
+    .contenedor-info {
+      .contenedor-descripcion {
+        h3 {
+          font-size: 1.5rem;
+        }
+      }
+    }
+  }
 }
