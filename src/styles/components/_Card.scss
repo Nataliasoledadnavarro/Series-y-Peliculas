@@ -5,26 +5,25 @@
   height: 500px;
   margin-top: 20px;
   .contenedor-img {
-   width: 245px;
+    width: 245px;
     height: 380px;
     overflow: hidden;
     img {
       width: 100%;
       height: 100%;
     }
-    img:hover{
-        transform: scale(1.1);
-        transition:all 0.3s ease 0s, height 0s ease 0s;
+    img:hover {
+      transform: scale(1.1);
+      transition: all 0.3s ease 0s, height 0s ease 0s;
     }
   }
-  .titulo-resultado{
-      color: $blanco;
-      font-weight:100;
-      font-size: 20px;
-      letter-spacing: 1px;
+  .titulo-resultado {
+    color: $blanco;
+    font-weight: 100;
+    font-size: 20px;
+    letter-spacing: 1px;
   }
-  .titulo-resultado:hover{
-    color: white; 
+  .titulo-resultado:hover {
+    color: white;
   }
 }
-

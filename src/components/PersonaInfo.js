@@ -4,7 +4,8 @@ import { mostrarImagen } from "../auxiliares/Funciones";
 import Context from "../contexto/Context";
 import Redes from "../components/Redes";
 import { urlBase, apiKey, titulosComunes } from "../auxiliares/Variables";
-import "../styles/components/_PersonaInfo.scss"
+import "../styles/components/_PersonaInfo.scss";
+
 const PersonaInfo = () => {
   const params = useParams();
   const lenguajeSeleccionado = useContext(Context).lenguaje;
@@ -19,7 +20,7 @@ const PersonaInfo = () => {
   }, [lenguajeSeleccionado, resultado, params.id]);
 
   return (
-    <section className="info-persona" >
+    <section className="info-persona">
       <div className="contenedor-links">
         <Link to={`/person/${params.id}/info`}>
           <h3>{titulosComunes[lenguajeSeleccionado].informacion}</h3>

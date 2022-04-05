@@ -1,14 +1,14 @@
 @import "../utilidades/Variables";
 
 .contenedor-videos {
-    width: auto;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    margin-bottom: 100px;
-    h3 {
-      color: $blanco;
-      font-size: 1.5rem;
-      margin-top: 80px;
-    }
+  width: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 100px;
+  h3 {
+    color: $blanco;
+    font-size: 1.5rem;
+    margin-top: 80px;
+  }
 }

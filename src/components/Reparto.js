@@ -13,7 +13,7 @@ const Reparto = () => {
   const { cast } = useFetch(
     `${urlBase}/${params.tipo}/${params.id}/credits?api_key=${apiKey}&language=${lenguajeSeleccionado}&page=1`
   );
-  console.log(cast);
+
   return (
     <>
       <HeaderDetalle />
