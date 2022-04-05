@@ -21,10 +21,12 @@ form {
 
 @media screen and (max-width: 600px) {
   form {
-    width: 100%;
+    width: 95%;
     button {
+      width: 40px;
       .icono-nav {
         width: 20px;
+        margin: 0%;
       }
     }
     input {
