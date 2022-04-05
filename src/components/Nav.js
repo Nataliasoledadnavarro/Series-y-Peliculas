@@ -20,7 +20,9 @@ const Nav = () => {
 
   return (
     <nav className="nav-superior">
-      <img className="logo" src={logo} alt="Logo de letra N"/>
+      <Link to="/">
+        <img className="logo" src={logo} alt="Logo de letra N" />
+      </Link>
       <ul className="contenedor-iconos">
         <Link to="/" className="link-nav" aria-label="Ir a Home">
           <li>

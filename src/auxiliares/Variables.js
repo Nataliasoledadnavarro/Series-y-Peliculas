@@ -102,7 +102,7 @@ export const titulosComunes = {
     buscar: "Buscar",
     resultados: "Resultados para: ",
     footer: "Realizado por",
-    error:"¡Ups! Ruta no encontrada",
+    error: "¡Ups! Ruta no encontrada",
     home: "Ir a Home",
     pagina: "Página",
   },
@@ -124,7 +124,7 @@ export const titulosComunes = {
     buscar: "Search for",
     resultados: "Results for: ",
     footer: "Made by",
-    error:"Oops! path not found",
+    error: "Oops! path not found",
     home: "Go to Home",
     pagina: "Page",
   },
@@ -146,9 +146,9 @@ export const titulosComunes = {
     buscar: "検索する",
     resultados: "結果: ",
     footer: "作られた",
-    error:"おっと！パスが見つかりません",
+    error: "おっと！パスが見つかりません",
     home: "家に帰る",
-    pagina: "ページ"
+    pagina: "ページ",
   },
   la: {
     info: "Info",
@@ -168,9 +168,9 @@ export const titulosComunes = {
     buscar: "Quarere",
     resultados: "Results for: ",
     footer: "Factum per",
-    error:"Oops! iter non inveni",
+    error: "Oops! iter non inveni",
     home: "Vade ad Home",
-    pagina:"Pagina"
+    pagina: "Pagina",
   },
   fr: {
     info: "Info",
@@ -190,9 +190,9 @@ export const titulosComunes = {
     buscar: "Chercher",
     resultados: "Résultats pour: ",
     footer: "Réalisé par",
-    error:"Oups! chemin introuvable",
+    error: "Oups! chemin introuvable",
     home: "Aller à la maison",
-    pagina:"Page"
+    pagina: "Page",
   },
   pt: {
     info: "informação",
@@ -212,9 +212,9 @@ export const titulosComunes = {
     buscar: "Procurar",
     resultados: "Resultados para: ",
     footer: "Realizado por",
-    error:"Ops! caminho não encontrado",
+    error: "Ops! caminho não encontrado",
     home: "Ir para Home",
-    pagina:"Página"
+    pagina: "Página",
   },
 };
 export const urlBase = "https://api.themoviedb.org/3";
