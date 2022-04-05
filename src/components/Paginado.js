@@ -18,11 +18,14 @@ const Paginado = ({
   paginasTotales,
 }) => {
   const lenguajeSeleccionado = useContext(Context).lenguaje;
+  const paginaActual = Number(pagina);
+  const totalDePaginas = Number(paginasTotales);
+
   return (
     <div className="contenedor-paginado">
       <button
         onClick={handleClickPrimeraPagina}
-        disabled={pagina === 1}
+        disabled={paginaActual === 1}
         aria-label="Primera página"
       >
         <FaAngleDoubleLeft />
@@ -30,18 +33,20 @@ const Paginado = ({
 
       <button
         onClick={handleClickPaginaAnterior}
-        disabled={pagina === 1}
+        disabled={paginaActual === 1}
         aria-label="Página Anterior"
       >
         <FaAngleLeft />
       </button>
       <p className="pagina-actual">
-        {titulosComunes[lenguajeSeleccionado].pagina} {pagina}
+        {titulosComunes[lenguajeSeleccionado].pagina} {paginaActual}
       </p>
       <button
         onClick={handleClickProximaPagina}
         disabled={
-          Number(paginasTotales) > 500 ? Number(pagina) === 500 : Number(pagina) === Number(paginasTotales)
+          totalDePaginas > 500
+            ? paginaActual === 500
+            : paginaActual === totalDePaginas
         }
         aria-label="Próxima página"
       >
@@ -50,10 +55,12 @@ const Paginado = ({
 
       <button
         onClick={() =>
-          handleClickUltimaPagina(paginasTotales > 500 ? 500 : paginasTotales)
+          handleClickUltimaPagina(totalDePaginas > 500 ? 500 : totalDePaginas)
         }
         disabled={
-          Number(paginasTotales) > 500 ? Number(pagina) === 500 : Number(pagina) === Number(paginasTotales)
+          totalDePaginas > 500
+            ? paginaActual === 500
+            : paginaActual === totalDePaginas
         }
         aria-label="Última página"
       >
