@@ -105,8 +105,8 @@
 
 ------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-<a href="buscadorpeliculasyseries.netlify.app">
-<img src="https://media.giphy.com/media/coBIzlrDq93doYaA9U/giphy.gif" width="100px"/>   Ir al buscador
+<a href="https://buscadorpeliculasyseries.netlify.app">
+<img src="https://media.giphy.com/media/coBIzlrDq93doYaA9U/giphy.gif" width="100px" alt="play"/> ¡IR AL PROYECTO!
 </a>
             
 ------------------------------------------------------------------------------------------------------------------------------------------------------------
